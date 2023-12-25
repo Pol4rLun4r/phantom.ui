@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 // interface
 import { ITitle } from "../Interface";
 
-const TitleStyle = () => {
+const Style = () => {
     return css`
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,27 +17,27 @@ const TitleStyle = () => {
 
     text-align: ${({ $style }: ITitle) => $style!.textAlign};
 
-    font-weight: ${({$style}: ITitle)=> 
-        $style!.fontWeight === "black" ? 900:
-        $style!.fontWeight === "bold" ? 700:
-        $style!.fontWeight === "semiBold" ? 600:
-        $style!.fontWeight === "regular" ? 400:
-        $style!.fontWeight === "semiLight" ? 350:
-        $style!.fontWeight === "light" ? 300 : 900};
+    font-weight: ${({ $style }: ITitle) =>
+            $style!.fontWeight === "black" ? 900 :
+                $style!.fontWeight === "bold" ? 700 :
+                    $style!.fontWeight === "semiBold" ? 600 :
+                        $style!.fontWeight === "regular" ? 400 :
+                            $style!.fontWeight === "semiLight" ? 350 :
+                                $style!.fontWeight === "light" ? 300 : 900};
 
 `
 }
 
-const H1 = styled.h1`${TitleStyle()};`
+const H1 = styled.h1`${Style()};`
 
-const H2 = styled.h2`${TitleStyle()};`
+const H2 = styled.h2`${Style()};`
 
-const H3 = styled.h3`${TitleStyle()};`
+const H3 = styled.h3`${Style()};`
 
-const H4 = styled.h4`${TitleStyle()};`
+const H4 = styled.h4`${Style()};`
 
-const H5 = styled.h5`${TitleStyle()};`
+const H5 = styled.h5`${Style()};`
 
-const H6 = styled.h6`${TitleStyle()};`
+const H6 = styled.h6`${Style()};`
 
-export {H1, H2, H3, H4, H5, H6}
+export { H1, H2, H3, H4, H5, H6 }
