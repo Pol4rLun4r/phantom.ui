@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 
 // style
+import { ThemeProvider } from "styled-components"
 import GlobalStyle from './PhantomUI/Style/Global.style.ts'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <GlobalStyle/>
-        <App />
+    <ThemeProvider theme={{ mode: 'dark' }}>
+      <GlobalStyle />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
 )

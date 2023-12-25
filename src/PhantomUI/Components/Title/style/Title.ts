@@ -1,11 +1,14 @@
 import styled, { css } from "styled-components";
 
+// theme
+import { titleColor } from "../../../Theme/Themes/Theme";
+
 // interface
 import { ITitle } from "../Interface";
 
 const Style = () => {
     return css`
-    color: white;
+    color: ${titleColor};
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: ${({ $style }: ITitle) => $style!.size};
 
