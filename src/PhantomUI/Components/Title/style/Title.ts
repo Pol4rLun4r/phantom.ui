@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 // theme
-import { titleColor } from "../../../Theme/Themes/Theme";
+import { titleColor } from "../../../Theme/Theme";
 
 // interface
 import { ITitle } from "../Interface";

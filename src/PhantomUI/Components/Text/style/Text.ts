@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 // theme
-import { textColor } from "../../../Theme/Themes/Theme";
+import { textColor } from "../../../Theme/Theme";
 
 // interface
 import { IText } from "../Interface"
