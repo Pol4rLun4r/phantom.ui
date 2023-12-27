@@ -22,10 +22,6 @@ type Style = {
 
     // variant  do texto
     variant?: 'default' | 'gradient'
-
-    // definição do gradiente (só é possível usar se a variável gradient estiver habilitada)
-    gradient?: { from: string, to: string, deg: number }
-    // 'from' seria o inicio, 'to' seria o final, ambos são cores. 'deg' seria os graus
 }
 
 interface IText {

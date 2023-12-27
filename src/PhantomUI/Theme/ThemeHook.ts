@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // palette colors
 import ColorSchema from "./Colors"
 
@@ -22,12 +23,11 @@ const getThemeValue = ({ props, values }: IThemeValue) => {
     const mode = props.theme.mode
     const colorSchema = props.theme.colorSchema
     const color =  ColorSchema[colorSchema][values[mode]]
-
     return color;
 }
 
 const themeColorSchema = (values: Values) => {
-    return function (props: never) {
+    return function (props: any) {
         return getThemeValue({ props, values });
     };
 }

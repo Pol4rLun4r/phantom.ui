@@ -4,7 +4,7 @@ import { ITextProps } from "./Interface";
 // style
 import { TextParagraph, TextSpan } from "./style/Text";
 
-const Text = ({ children, component, marginBottom, marginTop, marginLeft, marginRight, marginMixed, fontWeight, size, textAlign, variant, gradient }: ITextProps) => {
+const Text = ({ children, component, marginBottom, marginTop, marginLeft, marginRight, marginMixed, fontWeight, size, textAlign, variant }: ITextProps) => {
   const Style = {
     marginBottom,
     marginTop,
@@ -14,7 +14,6 @@ const Text = ({ children, component, marginBottom, marginTop, marginLeft, margin
     textAlign,
     fontWeight,
     variant,
-    gradient,
     size
   }
 

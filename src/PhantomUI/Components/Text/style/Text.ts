@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 // theme
 import { textColor } from "../../../Theme/Theme";
+import themeColorSchema from "../../../Theme/ThemeHook";
 
 // interface
 import { IText } from "../Interface"
@@ -35,17 +36,9 @@ const Style = () => {
 
 const VariantGradient = () => {
     return css`
-        ${HandleGradient()}
+        background: linear-gradient(90deg, ${themeColorSchema({ dark: 9, light: 9 })} 10%, ${themeColorSchema({ dark: 3, light: 3 })} 100%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
-    `
-}
-
-const HandleGradient = () => {
-    return css`
-        ${({ $style }: IText) => $style?.gradient ?
-            `background: linear-gradient(${$style.gradient.deg}deg, ${$style.gradient.from} 10%, ${$style.gradient.to} 100%);` :
-            `background: linear-gradient(90deg, #4B00B3 10%, #A964FF 100%);`}
     `
 }
 
