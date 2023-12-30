@@ -40,6 +40,7 @@ export const DefaultSetting = () => {
     font-weight: 600;
     appearance: none;
     border-style: none;
+    cursor: pointer;
     `;
 };
 
