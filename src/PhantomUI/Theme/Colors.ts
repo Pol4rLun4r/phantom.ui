@@ -22,12 +22,25 @@ const BlueYonder = [
     "#44639f",
     "#39588f",
     "#2d4b81"
-  ]
+]
 
+const Violet = [
+    "#f6ecff",
+    "#e7d6fb",
+    "#caabf1",
+    "#ac7ce8",
+    "#9354e0",
+    "#833cdb",
+    "#7b2eda",
+    "#6921c2",
+    "#5d1cae",
+    "#501599"
+]
 
 const ColorSchema = {
     lavenderIndigo: LavenderIndigo,
-    blueYonder: BlueYonder
+    blueYonder: BlueYonder,
+    violet: Violet
 }
 
 export default ColorSchema

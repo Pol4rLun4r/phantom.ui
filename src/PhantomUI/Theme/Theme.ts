@@ -1,13 +1,25 @@
 import theme from "styled-theming"
 
-export const backgroundColor = theme('mode', {
+// layout
+export const bodyColor = theme('mode', {
     light: '#ffffff',
     dark: '#242424',
 });
 
 export const borderColor = theme('mode', {
-    light: '',
-    dark: '',
+    light: '#e9ecef',
+    dark: '#2e2e2e',
+})
+
+// buttons
+export const buttonBackground = theme('mode', {
+    light: '#ffffff',
+    dark: '#2e2e2e'
+})
+
+export const buttonBorder = theme('mode', {
+    light: '#ced4da',
+    dark: '#424242'
 })
 
 // typography
