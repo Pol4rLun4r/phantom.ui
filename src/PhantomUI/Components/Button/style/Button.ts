@@ -66,6 +66,13 @@ const FilledVariant = () => {
     `
 }
 
+const LightVariant = () => {
+    return css`
+    color: ${themeColorSchema({ dark: 6, light: 6 })};
+    background-color: ${themeColorSchema({ dark: 6, light: 6 }, '0.15')};
+    `
+}
+
 const ButtonStyle = styled.button`
     ${DefaultConfig()}
 
@@ -73,8 +80,9 @@ const ButtonStyle = styled.button`
     ${Size()}
 
     // variants
-    ${DefaultVariant()}
+    /* ${DefaultVariant()} */
     /* ${FilledVariant()} */
+    ${LightVariant()}
 `
 
 export default ButtonStyle;
