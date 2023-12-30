@@ -37,7 +37,6 @@ const getThemeValue = ({ props, values, alpha }: IThemeValue) => {
     const colorSchema = props.theme.colorSchema
     const color = ColorSchema[colorSchema][values[mode]]
 
-    console.log(hexToRGB(color, alpha));
     return hexToRGB(color, alpha);
 }
 
