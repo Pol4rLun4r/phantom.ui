@@ -59,7 +59,7 @@ const DefaultVariant = () => {
     `
 }
 
-const DefaultFilled = () => {
+const FilledVariant = () => {
     return css`
     color: white;
     background-color: ${themeColorSchema({ dark: 6, light: 6 })};
@@ -74,7 +74,7 @@ const ButtonStyle = styled.button`
 
     // variants
     ${DefaultVariant()}
-    /* ${DefaultFilled()} */
+    /* ${FilledVariant()} */
 `
 
 export default ButtonStyle;
