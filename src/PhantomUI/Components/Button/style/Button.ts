@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 // settings
-import { Size, Radius, DefaultSetting } from "./Settings";
+import { Size, BorderRadius, DefaultSetting } from "./Settings";
 
 // variants
 import Variants from "./Variants";
@@ -9,7 +9,7 @@ import Variants from "./Variants";
 const ButtonStyle = styled.button`
     // settings
     ${DefaultSetting()}
-    ${Radius()}
+    ${BorderRadius()}
     ${Size()}
 
     // variants

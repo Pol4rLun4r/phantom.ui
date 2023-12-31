@@ -2,7 +2,8 @@ import { ReactNode } from "react";
 
 type Style = {
     // tamanho do texto
-    size?: string;
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    //     12px | 14px | 16px | 18px | 20px  <- font
 
     // margins do texto
     marginTop?: string;

@@ -3,6 +3,9 @@ import styled from "styled-components";
 // interface
 import { IGroup } from "../interface";
 
+// sizes
+import { Gap } from "./Settings";
+
 const GroupStyle = styled.div`
     // default
     display: flex;
@@ -14,21 +17,14 @@ const GroupStyle = styled.div`
 
     // variants de configuração
     align-items: ${({ $style }: IGroup) => $style?.align ? $style.align : 'flex-start'};
-
     justify-content: ${({ $style }: IGroup) => $style?.justify ? $style.justify : 'center'};
 
-    gap: ${({ $style }: IGroup) =>
-        $style?.gap === 'xs' ? '10px' :
-            $style?.gap === 'sm' ? '12px' :
-                $style?.gap === 'md' ? '16px' :
-                    $style?.gap === 'lg' ? '20px' :
-                        $style?.gap === 'xl' ? '32px' :
-                            $style?.gap === 'no-space' ? '0px' : '16px'};
-
-
+    // verificação e ativação do flex-grow
     & > * {
         ${({ $style }: IGroup) => $style?.grow ? 'flex-grow: 1;' : ''}
     }
+
+    ${Gap()}
 `
 
 export default GroupStyle;

@@ -3,35 +3,39 @@ import { css } from "styled-components";
 // interface
 import { IButton } from "../interface";
 
+// sizes
+import { Heights, Paddings, Radius } from "../../../Theme/Buttons";
+import { FontSizes } from "../../../Theme/Typography";
+
 export const Size = () => {
     return css`
-    font-size: ${({ $style }: IButton) => $style?.size === 'xs' ? '12px' :
-            $style?.size === 'sm' ? '14px' :
-                $style?.size === 'md' ? '16px' :
-                    $style?.size === 'lg' ? '18px' :
-                        $style?.size === 'xl' ? '20px' : `14px`};
+    font-size: ${({ $style }: IButton) => $style?.size === 'xs' ? FontSizes.xs :
+            $style?.size === 'sm' ? FontSizes.sm :
+                $style?.size === 'md' ? FontSizes.md :
+                    $style?.size === 'lg' ? FontSizes.lg :
+                        $style?.size === 'xl' ? FontSizes.xl : FontSizes.sm};
 
-    height: ${({ $style }: IButton) => $style?.size === 'xs' ? '30px' :
-            $style?.size === 'sm' ? '36px' :
-                $style?.size === 'md' ? '42px' :
-                    $style?.size === 'lg' ? '50px' :
-                        $style?.size === 'xl' ? '60px' : `36px`};
+    height: ${({ $style }: IButton) => $style?.size === 'xs' ? Heights.xs :
+            $style?.size === 'sm' ? Heights.sm :
+                $style?.size === 'md' ? Heights.md :
+                    $style?.size === 'lg' ? Heights.lg :
+                        $style?.size === 'xl' ? Heights.xl : Heights.sm};
 
-    padding: ${({ $style }: IButton) => $style?.size === 'xs' ? '0px 14px' :
-            $style?.size === 'sm' ? '0px 18px' :
-                $style?.size === 'md' ? '0px 22px' :
-                    $style?.size === 'lg' ? '0px 26px' :
-                        $style?.size === 'xl' ? '0px 32px' : `0px 18px`};
+    padding: ${({ $style }: IButton) => $style?.size === 'xs' ? Paddings.xs :
+            $style?.size === 'sm' ? Paddings.sm :
+                $style?.size === 'md' ? Paddings.md :
+                    $style?.size === 'lg' ? Paddings.lg :
+                        $style?.size === 'xl' ? Paddings.xl : Paddings.sm};
     `;
 };
 
-export const Radius = () => {
+export const BorderRadius = () => {
     return css`
-    border-radius: ${({ $style }: IButton) => $style?.radius === 'xs' ? '2px' :
-            $style?.radius === 'sm' ? '4px' :
-                $style?.radius === 'md' ? '8px' :
-                    $style?.radius === 'lg' ? '16px' :
-                        $style?.radius === 'xl' ? '32px' : `4px`}; 
+    border-radius: ${({ $style }: IButton) => $style?.radius === 'xs' ? Radius.xs :
+            $style?.radius === 'sm' ? Radius.sm :
+                $style?.radius === 'md' ? Radius.md :
+                    $style?.radius === 'lg' ? Radius.lg :
+                        $style?.radius === 'xl' ? Radius.xl : Radius.sm}; 
     `;
 };
 
