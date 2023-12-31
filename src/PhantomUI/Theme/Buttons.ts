@@ -24,3 +24,12 @@ export const Radius = {
     lg: '1rem',
     xl: '2rem'
 }
+
+// tamanho do ActionIcon
+export const IconSize = {
+    xs: '1.125rem',
+    sm: '1.375rem',
+    md: '1.75rem',
+    lg: '2.125rem',
+    xl: '2.75rem'
+}

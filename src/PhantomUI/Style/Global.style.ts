@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { bodyColor } from "../Theme/Theme";
+import { bodyColorTwo } from "../Theme/Theme";
 
 const GlobalStyle = createGlobalStyle`
     *{
@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     body{
         width: 100vw;
         height: 100vh;
-        background-color: ${bodyColor};
+        background-color: ${bodyColorTwo};
     }
 
     #root{

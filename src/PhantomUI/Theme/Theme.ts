@@ -6,6 +6,11 @@ export const bodyColor = theme('mode', {
     dark: '#242424',
 });
 
+export const bodyColorTwo = theme('mode', {
+    light: '#ffffff',
+    dark: '#1f1f1f',
+});
+
 export const borderColor = theme('mode', {
     light: '#e9ecef',
     dark: '#2e2e2e',
@@ -20,6 +25,11 @@ export const buttonBackground = theme('mode', {
 export const buttonBorder = theme('mode', {
     light: '#ced4da',
     dark: '#424242'
+})
+
+export const buttonActionIcon = theme('mode', {
+    light: '#495057',
+    dark: '#ffffff'
 })
 
 // typography
