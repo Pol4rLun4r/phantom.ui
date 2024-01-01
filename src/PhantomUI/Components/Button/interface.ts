@@ -30,6 +30,10 @@ interface IButton{
 
 interface IButtonProps extends Style {
     children: ReactNode;
+
+    onClick?: () => void;
+
+    Props?: object;
 }
 
 export type { IButton, IButtonProps}

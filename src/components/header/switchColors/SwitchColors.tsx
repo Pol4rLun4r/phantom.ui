@@ -1,0 +1,36 @@
+// UI
+import ActionBox from "../../../PhantomUI/Components/ActionBox/ActionBox"
+import Menu from "../../../PhantomUI/Components/Menu/Menu"
+
+// colors
+import ColorSchema from "../../../PhantomUI/Theme/Colors"
+
+// recoil state manage
+import { useSetRecoilState } from "recoil"
+import { colorSchemaMode } from "../../../hooks/recoil"
+
+const SwitchColors = () => {
+    const setColorSchema = useSetRecoilState(colorSchemaMode)
+
+    return (
+        <>
+            {Object.keys(ColorSchema).map((schema) => {
+                return (
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-expect-error
+                    <Menu.item key={schema} onClick={() => setColorSchema(schema)}
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-expect-error
+                        leftSection={< ActionBox size="sm" radius="lg" variant="custom" backgroundColor={ColorSchema[schema][5]} />}
+                    >
+                        {schema}
+                    </Menu.item >
+                )
+            }
+
+            )}
+        </>
+    )
+}
+
+export default SwitchColors

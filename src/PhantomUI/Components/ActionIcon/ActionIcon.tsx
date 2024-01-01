@@ -4,18 +4,18 @@ import ButtonStyle from "./style/Button"
 // interface
 import { IButtonProps } from "./interface"
 
-const ActionIcon = ({ children, variant, radius, size, onClick }: IButtonProps) => {
+const ActionIcon = ({ children, variant, radius, size, onClick, color, backgroundColor }: IButtonProps) => {
     const Style = {
         variant,
+        color,
+        backgroundColor,
         radius,
         size,
         onClick
     }
 
     return (
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
-        <ButtonStyle $style={Style} onClick={() => onClick()}>
+        <ButtonStyle $style={Style} onClick={() => onClick ? onClick() : ''}>
             {children}
         </ButtonStyle>
     )

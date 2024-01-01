@@ -1,10 +1,12 @@
-// import original module declarations
 import 'styled-components';
 
-// and extend them!
+type mode = 'dark' | 'light'
+
+type colorSchema = 'lavenderIndigo' | 'blueYonder' | 'violet'
+
 declare module 'styled-components' {
   export interface DefaultTheme {
-    mode: 'dark' | 'light',
-    colorSchema?: 'lavenderIndigo' | 'blueYonder' | 'violet'
+    mode: mode,
+    colorSchema?: colorSchema
   }
 }

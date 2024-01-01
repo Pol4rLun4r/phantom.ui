@@ -7,13 +7,14 @@ import Home from "./pages/Home"
 
 // recoil StateManage
 import { useRecoilValue } from 'recoil'
-import themeMode from './hooks/getThemeMode';
+import { themeMode, colorSchemaMode } from './hooks/recoil';
 
 function App() {
   const mode = useRecoilValue(themeMode);
+  const colorSchema = useRecoilValue(colorSchemaMode);
 
   return (
-    <ThemeProvider theme={{ mode: mode, colorSchema: 'violet' }}>
+    <ThemeProvider theme={{ mode: mode, colorSchema: colorSchema }}>
       <GlobalStyle />
       <Home />
     </ThemeProvider>
