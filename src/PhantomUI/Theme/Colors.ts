@@ -1,17 +1,17 @@
-const LavenderIndigo = [
-    "#f6e9ff",
-    "#e5cfff",
-    "#c79cff",
-    "#a964ff",
-    "#8e37fe",
-    "#7e19fe",
-    "#7609ff",
-    "#6400e4",
-    "#5900cc",
-    "#4b00b3"
-]
-
-const BlueYonder = [
+const ColorSchema = {
+  magenta: [
+    "#ffe9f6",
+    "#ffd1e6",
+    "#faa1c9",
+    "#f66eab",
+    "#f24391",
+    "#f02881",
+    "#f01879",
+    "#d60867",
+    "#c0005c",
+    "#a9004f"
+  ],
+  blueYonder: [
     "#eef3ff",
     "#dce4f5",
     "#b9c7e2",
@@ -22,9 +22,8 @@ const BlueYonder = [
     "#44639f",
     "#39588f",
     "#2d4b81"
-]
-
-const Violet = [
+  ],
+  violet: [
     "#f6ecff",
     "#e7d6fb",
     "#caabf1",
@@ -35,12 +34,56 @@ const Violet = [
     "#6921c2",
     "#5d1cae",
     "#501599"
-]
-
-const ColorSchema = {
-    lavenderIndigo: LavenderIndigo,
-    blueYonder: BlueYonder,
-    violet: Violet
+  ]
+  ,
+  lightBlue: [
+    "#e0fbff",
+    "#cbf2ff",
+    "#9ae2ff",
+    "#64d2ff",
+    "#3cc5fe",
+    "#23bcfe",
+    "#09b8ff",
+    "#00a1e4",
+    "#0090cd",
+    "#007cb5"
+  ],
+  green: [
+    "#e5feee",
+    "#d2f9e0",
+    "#a8f1c0",
+    "#7aea9f",
+    "#53e383",
+    "#3bdf70",
+    "#2bdd66",
+    "#1ac455",
+    "#0caf49",
+    "#00963c"
+  ],
+  deepOrange: [
+    "#fff4e2",
+    "#ffe9cc",
+    "#ffd09c",
+    "#fdb766",
+    "#fca13a",
+    "#fb931d",
+    "#fc8c0c",
+    "#e17900",
+    "#c86a00",
+    "#ae5a00"
+  ],
+  peachPink: [
+    "#ffede9",
+    "#fbdcd6",
+    "#efb7ac",
+    "#e49080",
+    "#db6f5a",
+    "#d55941",
+    "#d44e34",
+    "#bc3e27",
+    "#a83621",
+    "#942b19"
+  ],
 }
 
 export default ColorSchema
