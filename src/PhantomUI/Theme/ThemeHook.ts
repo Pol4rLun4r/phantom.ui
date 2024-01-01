@@ -2,10 +2,12 @@
 // palette colors
 import ColorSchema from "./Colors"
 
+import { colorSchema, mode } from "../styled"
+
 type Props = {
     theme: {
-        mode: 'dark' | 'light',
-        colorSchema: 'lavenderIndigo' | 'blueYonder'
+        mode: mode,
+        colorSchema: colorSchema
     }
 }
 
