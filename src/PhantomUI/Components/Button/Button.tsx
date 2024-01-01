@@ -4,7 +4,7 @@ import ButtonStyle from "./style/Button"
 // interface
 import { IButtonProps } from "./interface"
 
-const Button = ({ children, variant, radius, size }: IButtonProps) => {
+const Button = ({ children, variant, radius, size, onClick, Props }: IButtonProps) => {
     const Style = {
         variant,
         radius,
@@ -12,7 +12,7 @@ const Button = ({ children, variant, radius, size }: IButtonProps) => {
     }
 
     return (
-        <ButtonStyle $style={Style}>
+        <ButtonStyle $style={Style} onClick={() => onClick ? onClick() : ''} {...Props}>
             {children}
         </ButtonStyle>
     )

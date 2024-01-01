@@ -28,14 +28,14 @@ type Style = {
     backgroundColor?: string;
 }
 
-interface IButton{
+interface IBox{
     $style?: Style
 }
 
-interface IButtonProps extends Style {
+interface IBoxProps extends Style {
     children?: ReactNode;
 
     onClick?: () => void;
 }
 
-export type { IButton, IButtonProps}
+export type { IBox, IBoxProps}

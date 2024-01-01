@@ -6,7 +6,7 @@ import ActionIcon from '../../../PhantomUI/Components/ActionIcon/ActionIcon';
 
 // recoil StateManage
 import { useRecoilState } from 'recoil'
-import themeMode from '../../../hooks/getThemeMode'
+import { themeMode } from '../../../hooks/recoil'
 
 const SwitchTheme = () => {
     const [theme, setTheme] = useRecoilState(themeMode)

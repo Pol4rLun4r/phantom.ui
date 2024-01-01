@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
 // interface
-import { IButton } from "../interface";
+import { IBox } from "../interface";
 
 // colors
 import { buttonBackground, buttonBorder, buttonActionIcon } from "../../../Theme/Theme";
@@ -51,8 +51,8 @@ const TransparentVariant = () => {
 
 const CustomVariant = () => {
     return css`
-    color: ${({ $style }: IButton) => $style?.color ? $style?.color : 'black'};
-    background-color: ${({ $style }: IButton) => $style?.backgroundColor ? $style?.backgroundColor : 'white'};
+    color: ${({ $style }: IBox) => $style?.color ? $style?.color : 'black'};
+    background-color: ${({ $style }: IBox) => $style?.backgroundColor ? $style?.backgroundColor : 'white'};
     `;
 };
 
@@ -67,7 +67,7 @@ const WhiteVariant = () => {
 
 const Variants = () => {
     return css`
-    ${({ $style }: IButton) =>
+    ${({ $style }: IBox) =>
             $style?.variant === 'default' ? DefaultVariant() :
                 $style?.variant === 'filled' ? FilledVariant() :
                     $style?.variant === 'light' ? LightVariant() :
