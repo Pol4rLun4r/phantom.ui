@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { IStack } from "../interface";
 
 // sizes
-import { Gap } from "./Settings";
+import { Gap, Padding } from "./Settings";
 
 const StackStyle = styled.div`
     // default
@@ -18,6 +18,8 @@ const StackStyle = styled.div`
     // variants de configuração
     align-items: ${({ $style }: IStack) => $style?.align ? $style.align : 'stretch'};
     justify-content: ${({ $style }: IStack) => $style?.justify ? $style.justify : 'flex-start'};
+
+    ${Padding()}
 
     ${Gap()}
 `

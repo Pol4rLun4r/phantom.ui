@@ -18,6 +18,8 @@ const HeaderStyle = styled.header`
     width: 100%;
     height: 3.75rem;
 
+    position: fixed;
+
     background-color: ${bodyColor};
 
     border-bottom: 0.0625rem solid ${borderHeader};

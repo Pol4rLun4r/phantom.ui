@@ -1,9 +1,9 @@
 // style
-import { ThemeProvider } from "styled-components"
-import GlobalStyle from "./PhantomUI/Style/Global.style"
+import { ThemeProvider } from "styled-components";
+import GlobalStyle from "./PhantomUI/Style/Global.style";
 
 // pages
-import Home from "./pages/Home"
+import Home from "./pages/Home";
 
 // recoil StateManage
 import { useRecoilValue } from 'recoil'
@@ -21,4 +21,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

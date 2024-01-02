@@ -14,7 +14,6 @@ import { IconGhost3, IconPalette } from '@tabler/icons-react';
 import SwitchTheme from "./switchTheme/SwitchTheme";
 
 const Header = () => {
-
     return (
         <HeaderStyle>
             <Group height="100%" justify="space-between" align="center">

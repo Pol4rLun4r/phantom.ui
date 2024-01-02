@@ -1,5 +1,6 @@
 import { ReactNode } from "react"
 
+
 type Style = {
     // justify seria o 'justify-content', nesse caso define o alinhamento vertical
     justify?: 'center' | 'flex-end' | 'flex-start' | 'space-between'
@@ -18,6 +19,19 @@ type Style = {
 
     // define a altura da div
     height?: string
+
+    paddingTop?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'no-space'
+    //           10px | 12px | 16px | 20px | 32px |  0px
+    
+    paddingBottom?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'no-space'
+    //              10px | 12px | 16px | 20px | 32px |  0px
+    
+    // padding-left and padding Right
+    paddingLR?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'no-space'
+    //          10px | 12px | 16px | 20px | 32px |  0px
+
+    // todos os paddings
+    paddingMixed?: string
 }
 
 interface IStack {
