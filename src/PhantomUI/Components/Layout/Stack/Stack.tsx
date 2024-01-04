@@ -4,7 +4,7 @@ import { IStackProps } from "./interface"
 // style
 import StackStyle from "./style/Stack"
 
-const Stack = ({ children, width, height, justify, align, gap, paddingBottom, paddingTop, paddingLR, paddingMixed }: IStackProps) => {
+const Stack = ({ children, width, height, justify, align, gap, paddingBottom, paddingTop, paddingLR, paddingMixed , marginBottom, marginLeft, marginMixed, marginRight, marginTop, refProp}: IStackProps) => {
     const Style = {
         width,
         height,
@@ -14,11 +14,16 @@ const Stack = ({ children, width, height, justify, align, gap, paddingBottom, pa
         paddingBottom,
         paddingTop,
         paddingLR,
-        paddingMixed
+        paddingMixed,
+        marginBottom,
+        marginLeft,
+        marginRight,
+        marginTop,
+        marginMixed
     }
 
     return (
-        <StackStyle $style={Style}>
+        <StackStyle $style={Style} ref={refProp}>
             {children}
         </StackStyle>
     )

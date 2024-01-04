@@ -20,12 +20,21 @@ type Style = {
     // define a altura da div
     height?: string
 
+    // margins do container
+    marginTop?: string;
+    marginBottom?: string;
+    marginLeft?: string;
+    marginRight?: string;
+
+    // todas as margins juntas
+    marginMixed?: string;
+
     paddingTop?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'no-space'
     //           10px | 12px | 16px | 20px | 32px |  0px
-    
+
     paddingBottom?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'no-space'
     //              10px | 12px | 16px | 20px | 32px |  0px
-    
+
     // padding-left and padding Right
     paddingLR?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'no-space'
     //          10px | 12px | 16px | 20px | 32px |  0px
@@ -40,6 +49,9 @@ interface IStack {
 
 interface IStackProps extends Style {
     children: ReactNode
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    refProp?: any;
 }
 
 export type { IStack, IStackProps }

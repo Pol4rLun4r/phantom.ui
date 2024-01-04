@@ -13,6 +13,8 @@ export const Style = () => {
     margin: ${({ $style }: IText) => $style!.marginMixed};
 
     text-align: ${({ $style }: IText) => $style!.textAlign};
+    
+    max-width: ${({ $style }: IText) => $style!.maxWidth};
 
     font-weight: ${({ $style }: IText) => $style!.fontWeight === "black" ? 900 :
             $style!.fontWeight === "bold" ? 700 :

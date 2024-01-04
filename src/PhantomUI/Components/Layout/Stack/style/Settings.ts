@@ -47,3 +47,13 @@ export const Padding = () => {
     `;
 
 };
+
+export const Margin = () => {
+    return css`
+    margin-top: ${({ $style }: IStack) => $style?.marginTop ? $style?.marginTop : ''};
+    margin-bottom: ${({ $style }: IStack) => $style?.marginBottom ? $style?.marginBottom : ''};
+    margin-left: ${({ $style }: IStack) => $style?.marginLeft ? $style?.marginLeft : ''};
+    margin-right: ${({ $style }: IStack) => $style?.marginRight ? $style?.marginRight : ''};
+    margin: ${({ $style }: IStack) => $style?.marginMixed ? $style?.marginMixed : ''};
+    `;
+};

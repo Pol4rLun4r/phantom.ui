@@ -19,6 +19,9 @@ type Style = {
     // peso da fonte
     fontWeight?: 'black' | 'bold' | 'semiBold' | 'regular' | 'semiLight' | 'light'
     //            900    |  700   |  600       |  400      |  350        |  300
+
+    // css class
+    className?: string
 }
 
 interface ITitle{

@@ -1,5 +1,5 @@
 // style
-import Main from "../components/demos/home/main/Main";
+import Main from "../components/demos/home/style/Main";
 
 // components
 import Header from "../components/header/Header";

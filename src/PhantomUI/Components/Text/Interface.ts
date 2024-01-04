@@ -21,6 +21,9 @@ type Style = {
     fontWeight?: 'black' | 'bold' | 'semiBold' | 'regular' | 'semiLight' | 'light'
     //            900    |  700   |  600       |  400      |  350        |  300
 
+    // define a largura maxima do texto
+    maxWidth?: string
+
     // variant  do texto
     variant?: 'default' | 'gradient'
 }

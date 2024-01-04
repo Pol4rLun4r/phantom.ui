@@ -18,6 +18,8 @@ const Style = () => {
     margin-right: ${({ $style }: ITitle) => $style!.marginRight};
     margin: ${({ $style }: ITitle) => $style!.marginMixed};
 
+    line-height: ${({ $style }: ITitle) => $style!.size};
+
     text-align: ${({ $style }: ITitle) => $style!.textAlign};
 
     font-weight: ${({ $style }: ITitle) =>

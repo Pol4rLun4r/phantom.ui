@@ -4,7 +4,7 @@ import { ITitleProps } from "./Interface";
 // styles
 import { H1, H2, H3, H4, H5, H6 } from "./style/Title";
 
-const Title = ({ children, order, marginBottom, marginLeft, marginMixed, marginRight, marginTop, size, textAlign, fontWeight}: ITitleProps) => {
+const Title = ({ children, order, marginBottom, marginLeft, marginMixed, marginRight, marginTop, size, textAlign, fontWeight, className}: ITitleProps) => {
     const Style = {
         marginBottom,
         marginTop,
@@ -13,15 +13,15 @@ const Title = ({ children, order, marginBottom, marginLeft, marginMixed, marginR
         marginMixed,
         textAlign,
         fontWeight,
-        size
+        size,
     }
 
-    if (order == 2) return (<H2 $style={Style}>{children}</H2>)
-    if (order == 3) return (<H3 $style={Style}>{children}</H3>)
-    if (order == 4) return (<H4 $style={Style}>{children}</H4>)
-    if (order == 5) return (<H5 $style={Style}>{children}</H5>)
-    if (order == 6) return (<H6 $style={Style}>{children}</H6>)
-    return (<H1 $style={Style}>{children}</H1>)
+    if (order == 2) return (<H2 className={className} $style={Style}>{children}</H2>)
+    if (order == 3) return (<H3 className={className} $style={Style}>{children}</H3>)
+    if (order == 4) return (<H4 className={className} $style={Style}>{children}</H4>)
+    if (order == 5) return (<H5 className={className} $style={Style}>{children}</H5>)
+    if (order == 6) return (<H6 className={className} $style={Style}>{children}</H6>)
+    return (<H1 className={className} $style={Style}>{children}</H1>)
 }
 
 export default Title
