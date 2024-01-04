@@ -5,7 +5,7 @@ const Section = styled.div`
     display: flex;
     justify-content: center;
 
-    & * {
+    & div {
         max-width: 60rem;
     }
 `
