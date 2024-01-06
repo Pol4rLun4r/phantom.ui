@@ -13,8 +13,7 @@ export const Gap = () => {
             $style?.gap === 'sm' ? Gaps.sm :
                 $style?.gap === 'md' ? Gaps.md :
                     $style?.gap === 'lg' ? Gaps.lg :
-                        $style?.gap === 'xl' ? Gaps.xl :
-                            $style?.gap === 'no-space' ? '0rem' : Gaps.md};
+                        $style?.gap === 'xl' ? Gaps.xl : $style?.gap};
     `;
 };
 

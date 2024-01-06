@@ -6,6 +6,9 @@ import Stack from "../../../../PhantomUI/Components/Layout/Stack/Stack";
 // styled
 import Section from "../style/section";
 
+// components
+import Features from "./Features";
+
 // queries
 import { useMediaQuery } from "react-responsive";
 import { useResizeDetector } from "react-resize-detector";
@@ -32,6 +35,7 @@ const Introduction = () => {
                 <Text size="xl" textAlign="initial" maxWidth="50rem">
                     This is the start of a new project, a minimalist UI, based on Mantine UI, this project will include several interface components, made with Styled-Components, for more, see my GitHub.
                 </Text>
+                <Features/>
             </Stack>
         </Section>
     )

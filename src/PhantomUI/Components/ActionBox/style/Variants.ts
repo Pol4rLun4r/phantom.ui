@@ -65,6 +65,12 @@ const WhiteVariant = () => {
     `;
 };
 
+const GradientVariant = () => {
+    return css`
+        background: linear-gradient(94deg, ${themeColorSchema({ dark: 9, light: 9 })} 15%, ${themeColorSchema({ dark: 4, light: 4 })} 100%);
+    `;
+};
+
 const Variants = () => {
     return css`
     ${({ $style }: IBox) =>
@@ -74,7 +80,8 @@ const Variants = () => {
                         $style?.variant === 'outline' ? OutlineVariant() :
                             $style?.variant === 'transparent' ? TransparentVariant() :
                                 $style?.variant === 'custom' ? CustomVariant() :
-                                    $style?.variant === 'white' ? WhiteVariant() : DefaultVariant()};
+                                    $style?.variant === 'white' ? WhiteVariant() :
+                                        $style?.variant === 'gradient' ? GradientVariant() : DefaultVariant()};
 `;
 }
 

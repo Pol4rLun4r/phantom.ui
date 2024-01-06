@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 type Style = {
     // tamanho do botão
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | string
     //     12px | 14px | 16px | 18px | 20px  <- font
     //     30px | 36px | 42px | 50px | 60px  <- height
     //     14px | 18px | 22px | 26px | 32px  <- padding(left and right)
@@ -21,14 +21,14 @@ type Style = {
     marginMixed?: string;
 
     // define o estilo do botão
-    variant?: 'default' | 'filled' | 'light' | 'outline' | 'transparent' | 'white' | 'custom';
+    variant?: 'default' | 'filled' | 'light' | 'outline' | 'transparent' | 'white' | 'gradient' | 'custom';
 
     // só é possível usar se a variant 'custom' estiver ativa
     color?: string;
     backgroundColor?: string;
 }
 
-interface IBox{
+interface IBox {
     $style?: Style
 }
 
@@ -38,4 +38,4 @@ interface IBoxProps extends Style {
     onClick?: () => void;
 }
 
-export type { IBox, IBoxProps}
+export type { IBox, IBoxProps }

@@ -12,8 +12,8 @@ type Style = {
     align?: 'center' | 'flex-end' | 'flex-start' | 'stretch'
 
     // gap seria o espaço entre os elementos
-    gap?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'no-space'
-    //    10px | 12px | 16px | 20px | 32px |  0px
+    gap?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | (string & NonNullable<unknown>) 
+    //    10px | 12px | 16px | 20px | 32px | 
 
     // define a largura do da div 
     width?: string

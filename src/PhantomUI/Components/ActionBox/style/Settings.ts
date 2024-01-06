@@ -19,13 +19,13 @@ export const Size = () => {
             $style?.size === 'sm' ? IconSize.sm :
                 $style?.size === 'md' ? IconSize.md :
                     $style?.size === 'lg' ? IconSize.lg :
-                        $style?.size === 'xl' ? IconSize.xl : IconSize.md};
+                        $style?.size === 'xl' ? IconSize.xl : $style?.size};
 
     width: ${({ $style }: IBox) => $style?.size === 'xs' ? IconSize.xs :
             $style?.size === 'sm' ? IconSize.sm :
                 $style?.size === 'md' ? IconSize.md :
                     $style?.size === 'lg' ? IconSize.lg :
-                        $style?.size === 'xl' ? IconSize.xl : IconSize.md};
+                        $style?.size === 'xl' ? IconSize.xl : $style?.size};
     `;
 
 };
