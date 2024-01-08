@@ -1,15 +1,15 @@
 import { css } from "styled-components";
 
 // sizes
-import { Heights, Paddings } from "../../../../Theme/Buttons";
-import { FontSizes } from "../../../../Theme/Typography";
+import { Heights, Paddings } from "../../../../@Sizes/Buttons";
+import { $FontSize } from "../../../../@Sizes/Typography";
 
 // colors
 import { fontMenuLabel } from "../../../../Theme/Theme";
 
 export const Size = () => {
     return css`
-    font-size: ${FontSizes.xs};
+    font-size: ${$FontSize.xs};
 
     height: calc( ${Heights.xs} / 1.2);
 

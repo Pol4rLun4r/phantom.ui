@@ -4,8 +4,8 @@ import { css } from "styled-components";
 import { IFlex } from "../interface";
 
 // sizes
-import { Gaps } from "../../../../Theme/Gaps";
-import { Spacing } from "../../../../Theme/Spacing";
+import { Gaps } from "../../../../@Sizes/Gap";
+import { Spacing } from "../../../../@Sizes/Spacings";
 
 export const Gap = () => {
     return css`

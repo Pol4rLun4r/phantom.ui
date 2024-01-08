@@ -1,0 +1,1 @@
+export type PhantomFontWeight = 'black' | 'bold' | 'semiBold' | 'regular' | 'semiLight' | 'light';

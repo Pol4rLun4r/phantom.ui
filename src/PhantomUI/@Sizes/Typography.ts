@@ -1,5 +1,5 @@
 // tamanho dos textos 
-export const FontSizes = {
+export const $FontSize = {
     xs: '0.75rem',
     sm: '0.875rem',
     md: '1rem',

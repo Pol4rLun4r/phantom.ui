@@ -1,15 +1,16 @@
 import { css } from "styled-components";
 
 // sizes
-import { Heights, Paddings, Radius } from "../../../../Theme/Buttons";
-import { FontSizes } from "../../../../Theme/Typography";
+import { Heights, Paddings } from "../../../../@Sizes/Buttons";
+import { Radius } from "../../../../@Sizes/Radius";
+import { $FontSize } from "../../../../@Sizes/Typography";
 
 // colors
 import { fontMenuItems, hoverMenuItems } from "../../../../Theme/Theme";
 
 export const Size = () => {
     return css`
-    font-size: ${FontSizes.sm};
+    font-size: ${$FontSize.sm};
 
     height: ${Heights.xs};
 

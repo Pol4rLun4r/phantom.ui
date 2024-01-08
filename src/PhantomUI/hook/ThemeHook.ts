@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // palette colors
-import ColorSchema from "./Colors"
+import ColorSchema from "../Theme/Colors"
 
 import { colorSchema, mode } from "../styled"
 

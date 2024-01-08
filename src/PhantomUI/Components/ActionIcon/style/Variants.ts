@@ -5,7 +5,7 @@ import { IButton } from "../interface";
 
 // colors
 import { buttonBackground, buttonBorder, buttonActionIcon } from "../../../Theme/Theme";
-import themeColorSchema from "../../../Theme/ThemeHook";
+import themeColorSchema from "../../../hook/ThemeHook";
 
 const DefaultVariant = () => {
     return css`

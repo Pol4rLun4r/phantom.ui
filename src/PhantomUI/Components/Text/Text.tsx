@@ -1,16 +1,16 @@
-// interface 
-import { ITextProps } from "./Interface";
+// types
+import { TextProps } from "../../@Types/props";
 
 // style
 import { TextParagraph, TextSpan } from "./style/Text";
 
-const Text = ({ children, component, marginBottom, marginTop, marginLeft, marginRight, marginMixed, fontWeight, size, textAlign, variant, maxWidth }: ITextProps) => {
+const Text = ({ children, component, marginBottom, marginTop, marginLeft, marginRight, margin, fontWeight, size, textAlign, variant, maxWidth }: TextProps) => {
   const Style = {
     marginBottom,
     marginTop,
     marginLeft,
     marginRight,
-    marginMixed,
+    margin,
     textAlign,
     fontWeight,
     variant,
@@ -18,8 +18,8 @@ const Text = ({ children, component, marginBottom, marginTop, marginLeft, margin
     maxWidth
   }
 
-  if (component == "span") return (<TextSpan $style={Style}>{children}</TextSpan>)
-  return (<TextParagraph $style={Style}>{children}</TextParagraph>)
+  if (component == "span") return (<TextSpan {...Style}>{children}</TextSpan>)
+  return (<TextParagraph {...Style}>{children}</TextParagraph>)
 }
 
 export default Text;

@@ -4,8 +4,8 @@ import { css } from "styled-components";
 import { IButton } from "../interface";
 
 // sizes
-import { Heights, Paddings, Radius } from "../../../Theme/Buttons";
-import { FontSizes } from "../../../Theme/Typography";
+import { Heights, Paddings, Radius } from "../../../@Sizes/Buttons";
+import { FontSizes } from "../../../@Sizes/Typography";
 
 export const Size = () => {
     return css`

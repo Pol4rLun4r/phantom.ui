@@ -9,19 +9,10 @@ export const Heights = {
 
 // paddings laterais do botão
 export const Paddings = {
-    xs: '0rem 0.875rem',
-    sm: '0rem 1.125rem',
-    md: '0rem 1.375rem',
-    lg: '0rem 1.625rem',
-    xl: '0rem 2rem'
-}
-
-// raio do botão
-export const Radius = {
-    xs: '0.125rem',
-    sm: '0.25rem',
-    md: '0.5rem',
-    lg: '1rem',
+    xs: '0.875rem',
+    sm: '1.125rem',
+    md: '1.375rem',
+    lg: '1.625rem',
     xl: '2rem'
 }
 

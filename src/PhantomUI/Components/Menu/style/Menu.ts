@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 // colors
 import { borderMenu, bodyMenu } from "../../../Theme/Theme";
-import { Radius } from "../../../Theme/Buttons";
+import { Radius } from "../../../@Sizes/Radius";
 
 export const MenuContainer = styled.div`
     display: flex;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { bodyColor } from "../../../PhantomUI/Theme/Theme";
 
 // sizes
-import { Spacing } from "../../../PhantomUI/Theme/Spacing";
+import { Spacing } from "../../../PhantomUI/@Sizes/Spacings";
 
 // border color
 import theme from "styled-theming";

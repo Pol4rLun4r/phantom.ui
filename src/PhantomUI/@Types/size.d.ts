@@ -1,0 +1,1 @@
+export type PhantomSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';

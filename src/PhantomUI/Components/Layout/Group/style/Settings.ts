@@ -4,7 +4,7 @@ import { css } from "styled-components";
 import { IGroup } from "../interface";
 
 // sizes
-import { Gaps } from "../../../../Theme/Gaps";
+import { Gaps } from "../../../../@Sizes/Gap";
 
 export const Gap = () => {
     return css`
