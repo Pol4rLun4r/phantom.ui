@@ -37,3 +37,11 @@ export interface GroupProps extends PhantomProps {
 export interface StackProps extends PhantomProps {
     children: ReactNode;
 }
+
+export interface ActionIconProps extends PhantomProps {
+    children: ReactNode;
+
+    size?: PhantomSize;
+
+    onClick?: () => void;
+}

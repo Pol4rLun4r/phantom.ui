@@ -1,21 +1,28 @@
 // style
 import ButtonStyle from "./style/Button"
 
-// interface
-import { IButtonProps } from "./interface"
+// type
+import type { ActionIconProps } from "../../@Types/props"
 
-const ActionIcon = ({ children, variant, radius, size, onClick, color, backgroundColor }: IButtonProps) => {
+const ActionIcon = ({
+    // settings props
+    children,
+    size,
+    onClick,
+
+    // props
+    direction, justify, align, gap, width, height, maxWidth, minWidth, maxHeight, minHeight, marginTop, marginBottom, marginLeft, marginRight, margin, paddingTop, paddingBottom, paddingLeft, paddingRight, padding, fontWeight, textAlign, fontSize, letterSpacing, textTransform, position, display, top, left, bottom, right
+}: ActionIconProps) => {
     const Style = {
-        variant,
-        color,
-        backgroundColor,
-        radius,
+        // custom style props
         size,
-        onClick
+
+        // default style props
+        direction, justify, align, gap, width, height, maxWidth, minWidth, maxHeight, minHeight, marginTop, marginBottom, marginLeft, marginRight, margin, paddingTop, paddingBottom, paddingLeft, paddingRight, padding, fontWeight, textAlign, fontSize, letterSpacing, textTransform, position, display, top, left, bottom, right
     }
 
     return (
-        <ButtonStyle $style={Style} onClick={() => onClick ? onClick() : ''}>
+        <ButtonStyle {...Style} onClick={() => onClick ? onClick() : ''}>
             {children}
         </ButtonStyle>
     )
