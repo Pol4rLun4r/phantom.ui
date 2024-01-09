@@ -1,30 +1,23 @@
-// interface
-import { IFlexProps } from "./interface"
+// type
+import type { FlexProps } from "../../../@Types/props"
 
 // style
 import FlexStyle from "./style/Flex"
 
-const Flex = ({ children, width, height, justify, align, gap, paddingBottom, paddingTop, paddingLR, paddingMixed , marginBottom, marginLeft, marginMixed, marginRight, marginTop, refProp, direction}: IFlexProps) => {
+const Flex = ({
+    // settings props
+    children,
+    refProp,
+
+    // props
+    direction, justify, align, gap, width, height, maxWidth, minWidth, maxHeight, minHeight, marginTop, marginBottom, marginLeft, marginRight, margin, paddingTop, paddingBottom, paddingLeft, paddingRight, padding, fontWeight, textAlign, fontSize, letterSpacing, textTransform, position, display, top, left, bottom, right
+}: FlexProps) => {
     const Style = {
-        width,
-        height,
-        justify,
-        align,
-        gap,
-        paddingBottom,
-        paddingTop,
-        paddingLR,
-        paddingMixed,
-        marginBottom,
-        marginLeft,
-        marginRight,
-        marginTop,
-        marginMixed,
-        direction
+        direction, justify, align, gap, width, height, maxWidth, minWidth, maxHeight, minHeight, marginTop, marginBottom, marginLeft, marginRight, margin, paddingTop, paddingBottom, paddingLeft, paddingRight, padding, fontWeight, textAlign, fontSize, letterSpacing, textTransform, position, display, top, left, bottom, right
     }
 
     return (
-        <FlexStyle $style={Style} ref={refProp}>
+        <FlexStyle {...Style} ref={refProp}>
             {children}
         </FlexStyle>
     )

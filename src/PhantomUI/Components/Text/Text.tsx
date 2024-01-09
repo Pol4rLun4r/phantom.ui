@@ -1,21 +1,19 @@
-// types
+// type
 import { TextProps } from "../../@Types/props";
 
 // style
 import { TextParagraph, TextSpan } from "./style/Text";
 
-const Text = ({ children, component, marginBottom, marginTop, marginLeft, marginRight, margin, fontWeight, size, textAlign, variant, maxWidth }: TextProps) => {
+const Text = ({
+  // settings props
+  children,
+  component,
+
+  // props
+  direction, justify, align, gap, width, height, maxWidth, minWidth, maxHeight, minHeight, marginTop, marginBottom, marginLeft, marginRight, margin, paddingTop, paddingBottom, paddingLeft, paddingRight, padding, fontWeight, textAlign, fontSize, letterSpacing, textTransform, position, display, top, left, bottom, right
+}: TextProps) => {
   const Style = {
-    marginBottom,
-    marginTop,
-    marginLeft,
-    marginRight,
-    margin,
-    textAlign,
-    fontWeight,
-    variant,
-    size,
-    maxWidth
+    direction, justify, align, gap, width, height, maxWidth, minWidth, maxHeight, minHeight, marginTop, marginBottom, marginLeft, marginRight, margin, paddingTop, paddingBottom, paddingLeft, paddingRight, padding, fontWeight, textAlign, fontSize, letterSpacing, textTransform, position, display, top, left, bottom, right
   }
 
   if (component == "span") return (<TextSpan {...Style}>{children}</TextSpan>)

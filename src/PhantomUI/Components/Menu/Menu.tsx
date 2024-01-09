@@ -1,6 +1,6 @@
 import { ReactNode, useState } from "react";
 
-// config menu
+// settings menu
 import { useLayer } from "react-laag"
 import MenuItem from "./MenuItem/MenuItem";
 import MenuLabel from "./MenuLabel/MenuLabel";

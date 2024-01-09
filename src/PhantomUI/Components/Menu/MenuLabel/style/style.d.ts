@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
 
-export interface IMenu {
+export interface MenuLabelProps {
     children: ReactNode;
 }

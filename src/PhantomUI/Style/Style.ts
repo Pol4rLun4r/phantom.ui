@@ -6,6 +6,7 @@ import type { PhantomStyleProps } from "../@Types/style-props";
 // settings
 import { FontSize, FontWeight } from "./typography/Typography.style";
 import { Gap } from "./size/Gap.style";
+import { Padding } from "./size/Padding.style";
 
 const Style = () => {
     return css`
@@ -30,11 +31,7 @@ const Style = () => {
     margin-right: ${({ marginRight }: PhantomStyleProps) => marginRight};
     margin: ${({ margin }: PhantomStyleProps) => margin};
 
-    padding-top: ${({ paddingTop }: PhantomStyleProps) => paddingTop};
-    padding-bottom: ${({ paddingBottom }: PhantomStyleProps) => paddingBottom};
-    padding-left: ${({ paddingLeft }: PhantomStyleProps) => paddingLeft};
-    padding-right: ${({ paddingRight }: PhantomStyleProps) => paddingRight};
-    padding: ${({ padding }: PhantomStyleProps) => padding};
+    ${Padding()}
 
     ${FontWeight()};
     text-align: ${({ textAlign }: PhantomStyleProps) => textAlign};

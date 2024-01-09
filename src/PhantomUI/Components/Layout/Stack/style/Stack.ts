@@ -1,29 +1,22 @@
 import styled from "styled-components";
 
-// interface
-import { IStack } from "../interface";
+// style
+import Style from "../../../../Style/Style";
 
-// sizes
-import { Gap, Margin, Padding } from "./Settings";
+// type
+import type { StackProps } from "../../../../@Types/props";
 
 const StackStyle = styled.div`
+    ${Style()}
+
     // default
     display: flex;
-    flex-direction: column;
-
-    // variants de tamanho
-    ${({ $style }: IStack) => $style?.width ? `width: ${$style.width};` : undefined}
-    ${({ $style }: IStack) => $style?.height ? `height: ${$style.height};` : undefined}
+    flex-direction: ${({ direction }: StackProps) => direction ? direction : 'column'};
 
     // variants de configuração
-    align-items: ${({ $style }: IStack) => $style?.align ? $style.align : 'stretch'};
-    justify-content: ${({ $style }: IStack) => $style?.justify ? $style.justify : 'flex-start'};
+    align-items: ${({ align }: StackProps) => align ? align : 'stretch'};
+    justify-content: ${({ justify }: StackProps) => justify ? justify : 'center'};
 
-    ${Padding()}
-
-    ${Margin()}
-
-    ${Gap()}
 `
 
 export default StackStyle;

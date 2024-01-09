@@ -21,7 +21,7 @@ export interface PhantomStyleProps {
     marginRight?: React.CSSProperties['marginRight'];
     margin?: React.CSSProperties['margin'];
 
-    paddingTop?: React.CSSProperties['paddingTop'];
+    paddingTop?: PhantomSize | (string & NonNullable<unknown>);
     paddingBottom?: React.CSSProperties['paddingBottom'];
     paddingLeft?: React.CSSProperties['paddingLeft'];
     paddingRight?: React.CSSProperties['paddingRight'];

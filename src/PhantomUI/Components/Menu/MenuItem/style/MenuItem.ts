@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-// interface
-import { IMenu } from "../interface";
+// type
+import type { MenuItemProps } from "../style";
 
 // settings
 import { Size, DefaultSetting } from "./Settings";
@@ -9,7 +9,7 @@ import { Size, DefaultSetting } from "./Settings";
 const MenuStyle = styled.button`
 
     .leftSection {
-        padding-right: ${({ $style }: IMenu) => $style.leftSection ? '0.5rem;' : '0rem'};
+        padding-right: ${({ leftSection }: MenuItemProps) => leftSection ? '0.5rem;' : '0rem'};
     }
 
     // settings

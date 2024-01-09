@@ -1,30 +1,22 @@
 import styled from "styled-components";
 
-// interface
-import { IGroup } from "../interface";
+// type
+import type { GroupProps } from "../../../../@Types/props";
 
-// sizes
-import { Gap } from "./Settings";
+// default settings
+import Style from "../../../../Style/Style";
 
 const GroupStyle = styled.div`
+    ${Style()}
+
     // default
     display: flex;
-    flex-direction: row;
-
-    // variants de tamanho
-    ${({ $style }: IGroup) => $style?.width ? `width: ${$style.width};` : undefined}
-    ${({ $style }: IGroup) => $style?.height ? `height: ${$style.height};` : undefined}
+    flex-direction: ${({ direction }: GroupProps) => direction ? direction : 'row '};
 
     // variants de configuração
-    align-items: ${({ $style }: IGroup) => $style?.align ? $style.align : 'flex-start'};
-    justify-content: ${({ $style }: IGroup) => $style?.justify ? $style.justify : 'center'};
+    align-items: ${({ align }: GroupProps) => align ? align : 'center'};
+    justify-content: ${({ justify }: GroupProps) => justify ? justify : 'center'};
 
-    // verificação e ativação do flex-grow
-    & > * {
-        ${({ $style }: IGroup) => $style?.grow ? 'flex-grow: 1;' : ''}
-    }
-
-    ${Gap()}
 `
 
 export default GroupStyle;

@@ -1,29 +1,23 @@
-// interface
-import { IStackProps } from "./interface"
+// type
+import type { StackProps } from "../../../@Types/props"
 
 // style
 import StackStyle from "./style/Stack"
 
-const Stack = ({ children, width, height, justify, align, gap, paddingBottom, paddingTop, paddingLR, paddingMixed , marginBottom, marginLeft, marginMixed, marginRight, marginTop, refProp}: IStackProps) => {
+const Stack = ({
+    // settings props
+    children,
+    refProp,
+
+    // props
+    direction, justify, align, gap, width, height, maxWidth, minWidth, maxHeight, minHeight, marginTop, marginBottom, marginLeft, marginRight, margin, paddingTop, paddingBottom, paddingLeft, paddingRight, padding, fontWeight, textAlign, fontSize, letterSpacing, textTransform, position, display, top, left, bottom, right
+}: StackProps) => {
     const Style = {
-        width,
-        height,
-        justify,
-        align,
-        gap,
-        paddingBottom,
-        paddingTop,
-        paddingLR,
-        paddingMixed,
-        marginBottom,
-        marginLeft,
-        marginRight,
-        marginTop,
-        marginMixed
+        direction, justify, align, gap, width, height, maxWidth, minWidth, maxHeight, minHeight, marginTop, marginBottom, marginLeft, marginRight, margin, paddingTop, paddingBottom, paddingLeft, paddingRight, padding, fontWeight, textAlign, fontSize, letterSpacing, textTransform, position, display, top, left, bottom, right
     }
 
     return (
-        <StackStyle $style={Style} ref={refProp}>
+        <StackStyle {...Style} ref={refProp}>
             {children}
         </StackStyle>
     )

@@ -1,29 +1,21 @@
 import styled from "styled-components";
 
-// interface
-import { IFlex } from "../interface";
+// type
+import type { FlexProps } from "../../../../@Types/props";
 
-// sizes
-import { Gap, Margin, Padding } from "./Settings";
+// default settings
+import Style from "../../../../Style/Style";
 
 const FlexStyle = styled.div`
+    ${Style()}
+
     // default
     display: flex;
-    flex-direction: ${({ $style }: IFlex) => $style?.direction ? $style?.direction : 'row'};
-
-    // variants de tamanho
-    ${({ $style }: IFlex) => $style?.width ? `width: ${$style.width};` : undefined}
-    ${({ $style }: IFlex) => $style?.height ? `height: ${$style.height};` : undefined}
 
     // variants de configuração
-    align-items: ${({ $style }: IFlex) => $style?.align ? $style.align : 'center'};
-    justify-content: ${({ $style }: IFlex) => $style?.justify ? $style.justify : 'center'};
+    align-items: ${({ align }: FlexProps) => align ? align : 'center'};
+    justify-content: ${({ justify }: FlexProps) => justify ? justify : 'center'};
 
-    ${Padding()}
-
-    ${Margin()}
-
-    ${Gap()}
 `
 
 export default FlexStyle;

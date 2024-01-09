@@ -1,17 +1,16 @@
 // style
 import MenuStyle from "./style/MenuItem"
 
-// interface
-import { IMenuProps } from "./interface"
+// type
+import type { MenuItemProps } from "./style"
 
-const MenuItem = ({ children, onClick, leftSection, rightSection }: IMenuProps) => {
+const MenuItem = ({ children, onClick, leftSection, rightSection }: MenuItemProps) => {
     const Style = {
-        leftSection,
-        rightSection
+        leftSection, rightSection
     }
 
     return (
-        <MenuStyle $style={Style} onClick={() => onClick ? onClick() : ''}>
+        <MenuStyle {...Style} onClick={() => onClick ? onClick() : ''}>
             <div className="leftSection">
                 {leftSection}
             </div>
