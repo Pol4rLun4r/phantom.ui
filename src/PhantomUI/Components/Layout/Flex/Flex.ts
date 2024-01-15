@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 // type
-import type { FlexProps } from "../../../../@Types/props";
+import type { FlexProps } from "../../../@Types/props";
 
 // default settings
-import Style from "../../../../Style/Style";
+import Style from "../../../Style/Style";
 
-const FlexStyle = styled.div`
+const Flex = styled.div`
     ${Style()}
 
     // default
@@ -18,4 +18,4 @@ const FlexStyle = styled.div`
 
 `
 
-export default FlexStyle;
+export default Flex;

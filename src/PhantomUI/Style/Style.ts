@@ -12,7 +12,7 @@ const Style = () => {
     return css`
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    direction: ${({ direction }: PhantomStyleProps) => direction};
+    flex-direction: ${({ direction }: PhantomStyleProps) => direction};
     justify-content: ${({ justify }: PhantomStyleProps) => justify};
     align-items: ${({ align }: PhantomStyleProps) => align};
     ${Gap()};

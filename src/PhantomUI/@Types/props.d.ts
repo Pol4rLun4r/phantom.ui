@@ -4,7 +4,7 @@ import type { PhantomSize } from "./size";
 
 export interface PhantomProps extends PhantomStyleProps {
     size?: PhantomSize | number | (string & NonNullable<unknown>);
-    refProp?: React.ClassAttributes.ref;
+    // refProp?: React.ClassAttributes.ref;
 }
 
 type TextVariant = 'default' | 'gradient';
@@ -13,10 +13,6 @@ export interface TextProps extends PhantomProps {
 
     // variant  do texto
     variant?: TextVariant;
-
-    // componente do texto, por exemplo, se ele será um paragrafo ou um 'span'
-    component?: 'default' | 'span'
-    //          'default' seria o paragrafo
 }
 
 export interface TitleProps extends PhantomProps {

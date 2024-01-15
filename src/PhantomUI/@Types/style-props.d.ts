@@ -27,9 +27,9 @@ export interface PhantomStyleProps {
     paddingRight?: React.CSSProperties['paddingRight'];
     padding?: React.CSSProperties['padding'];
 
-    fontWeight?: PhantomFontWeight | number;
+    fontWeight?: PhantomFontWeight | number | (string & NonNullable<unknown>);
     textAlign?: React.CSSProperties['textAlign'];
-    fontSize?: PhantomSize | number;
+    fontSize?: PhantomSize | (string & NonNullable<unknown>);
     letterSpacing?: React.CSSProperties['letterSpacing'];
     textTransform?: React.CSSProperties['textTransform'];
 

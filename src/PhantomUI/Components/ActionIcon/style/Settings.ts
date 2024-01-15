@@ -4,16 +4,17 @@ import { css } from "styled-components";
 import { IButton } from "../interface";
 
 // sizes
-import { Radius, IconSize } from "../../../@Sizes/Buttons";
-import { FontSizes } from "../../../@Sizes/Typography";
+import { IconSize } from "../../../@Sizes/Buttons";
+import { Radius } from "../../../@Sizes/Radius";
+import { $FontSize } from "../../../@Sizes/Typography";
 
 export const Size = () => {
     return css`
-    font-size: ${({ $style }: IButton) => $style?.size === 'xs' ? FontSizes.xs :
-            $style?.size === 'sm' ? FontSizes.sm :
-                $style?.size === 'md' ? FontSizes.md :
-                    $style?.size === 'lg' ? FontSizes.lg :
-                        $style?.size === 'xl' ? FontSizes.xl : FontSizes.sm};
+    font-size: ${({ $style }: IButton) => $style?.size === 'xs' ? $FontSize.xs :
+            $style?.size === 'sm' ? $FontSize.sm :
+                $style?.size === 'md' ? $FontSize.md :
+                    $style?.size === 'lg' ? $FontSize.lg :
+                        $style?.size === 'xl' ? $FontSize.xl : $FontSize.sm};
 
     height: ${({ $style }: IButton) => $style?.size === 'xs' ? IconSize.xs :
             $style?.size === 'sm' ? IconSize.sm :
