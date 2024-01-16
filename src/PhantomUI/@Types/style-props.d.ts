@@ -21,15 +21,18 @@ export interface PhantomStyleProps {
     marginRight?: React.CSSProperties['marginRight'];
     margin?: React.CSSProperties['margin'];
 
-    paddingTop?: PhantomSize | (string & NonNullable<unknown>);
+    paddingTop?: PhantomSize | (string & NonNullable<unknown>) | React.CSSProperties['paddingTop'];
     paddingBottom?: React.CSSProperties['paddingBottom'];
     paddingLeft?: React.CSSProperties['paddingLeft'];
     paddingRight?: React.CSSProperties['paddingRight'];
     padding?: React.CSSProperties['padding'];
 
+    radius?: PhantomSize;
+
     fontWeight?: PhantomFontWeight | number | (string & NonNullable<unknown>);
     textAlign?: React.CSSProperties['textAlign'];
     fontSize?: PhantomSize | (string & NonNullable<unknown>);
+    lineHeight?: (string & NonNullable<unknown>) | React.CSSProperties['lineHeight'];
     letterSpacing?: React.CSSProperties['letterSpacing'];
     textTransform?: React.CSSProperties['textTransform'];
 
@@ -39,4 +42,7 @@ export interface PhantomStyleProps {
     left?: React.CSSProperties['left'];
     bottom?: React.CSSProperties['bottom'];
     right?: React.CSSProperties['right'];
+
+    backgroundColor?: React.CSSProperties['backgroundColor'];
+    color?: React.CSSProperties['color'];
 }

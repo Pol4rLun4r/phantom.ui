@@ -1,22 +1,22 @@
 import styled from "styled-components";
 
-// style
-import Style from "../../../Style/Style";
-
 // type
 import type { PhantomProps } from "../../../@Types/props";
 
-const Stack = styled.div<PhantomProps>`
+// default settings
+import Style from "../../../Style/Style";
+
+const Group = styled.div<PhantomProps>`
     ${Style()}
 
     // default
     display: flex;
-    flex-direction: ${({ direction }) => direction ? direction : 'column'};
+    flex-direction: ${({ direction }) => direction ? direction : 'row '};
 
     // variants de configuração
-    align-items: ${({ align }) => align ? align : 'stretch'};
+    align-items: ${({ align }) => align ? align : 'center'};
     justify-content: ${({ justify }) => justify ? justify : 'center'};
 
 `
 
-export default Stack;
+export default Group;

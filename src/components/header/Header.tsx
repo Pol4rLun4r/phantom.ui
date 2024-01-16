@@ -21,7 +21,7 @@ const Header = () => {
                     <ActionIcon size="lg" radius="lg" variant="filled">
                         <IconGhost3 stroke={2} />
                     </ActionIcon>
-                    <Title fontWeight="bold" order={2}>Phantom</Title>
+                    <Title fontWeight="bold" as="h2">Phantom</Title>
                 </Group>
                 <Group gap="sm">
                     <Menu activeMenu={<ActionIcon size="lg" radius="md"><IconPalette stroke={1.5} /></ActionIcon>}>

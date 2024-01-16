@@ -1,7 +1,6 @@
 import { css } from "styled-components";
 
-// interface
-import { IButton } from "../interface";
+import type { ActionIconProps } from "../../../@Types/props";
 
 // colors
 import { buttonBackground, buttonBorder, buttonActionIcon } from "../../../Theme/Theme";
@@ -51,8 +50,7 @@ const TransparentVariant = () => {
 
 const CustomVariant = () => {
     return css`
-    color: ${({ $style }: IButton) => $style?.color ? $style?.color : 'black'};
-    background-color: ${({ $style }: IButton) => $style?.backgroundColor ? $style?.backgroundColor : 'white'};
+    background-color: ${({ backgroundColor }: ActionIconProps) => backgroundColor ? backgroundColor : 'white'};
     `;
 };
 
@@ -67,14 +65,14 @@ const WhiteVariant = () => {
 
 const Variants = () => {
     return css`
-    ${({ $style }: IButton) =>
-            $style?.variant === 'default' ? DefaultVariant() :
-                $style?.variant === 'filled' ? FilledVariant() :
-                    $style?.variant === 'light' ? LightVariant() :
-                        $style?.variant === 'outline' ? OutlineVariant() :
-                            $style?.variant === 'transparent' ? TransparentVariant() :
-                                $style?.variant === 'custom' ? CustomVariant() :
-                                    $style?.variant === 'white' ? WhiteVariant() : DefaultVariant()};
+    ${({ variant }: ActionIconProps) =>
+            variant === 'default' ? DefaultVariant() :
+                variant === 'filled' ? FilledVariant() :
+                    variant === 'light' ? LightVariant() :
+                        variant === 'outline' ? OutlineVariant() :
+                            variant === 'transparent' ? TransparentVariant() :
+                                variant === 'custom' ? CustomVariant() :
+                                    variant === 'white' ? WhiteVariant() : DefaultVariant()};
 `;
 }
 

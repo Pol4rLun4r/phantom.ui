@@ -7,6 +7,7 @@ import type { PhantomStyleProps } from "../@Types/style-props";
 import { FontSize, FontWeight } from "./typography/Typography.style";
 import { Gap } from "./size/Gap.style";
 import { Padding } from "./size/Padding.style";
+import { BorderRadius } from "./size/Radius.style";
 
 const Style = () => {
     return css`
@@ -33,9 +34,12 @@ const Style = () => {
 
     ${Padding()}
 
+    ${BorderRadius()}
+
     ${FontWeight()};
     text-align: ${({ textAlign }: PhantomStyleProps) => textAlign};
     ${FontSize()};
+    line-height: ${({ lineHeight }: PhantomStyleProps) => lineHeight};
     letter-spacing: ${({ letterSpacing }: PhantomStyleProps) => letterSpacing};
     text-transform: ${({ textTransform }: PhantomStyleProps) => textTransform};
 
@@ -44,7 +48,10 @@ const Style = () => {
     top: ${({ top }: PhantomStyleProps) => top};
     left: ${({ left }: PhantomStyleProps) => left};
     bottom: ${({ bottom }: PhantomStyleProps) => bottom};
-    bottom: ${({ right }: PhantomStyleProps) => right};
+    right: ${({ right }: PhantomStyleProps) => right};
+
+    background-color: ${({ backgroundColor }: PhantomStyleProps) => backgroundColor};
+    color: ${({ color }: PhantomStyleProps) => color};
 `;
 };
 

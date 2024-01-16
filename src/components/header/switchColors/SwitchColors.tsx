@@ -1,5 +1,5 @@
 // UI
-import ActionBox from "../../../PhantomUI/Components/ActionBox/ActionBox"
+import ActionIcon from "../../../PhantomUI/Components/ActionIcon/ActionIcon"
 import Menu from "../../../PhantomUI/Components/Menu/Menu"
 
 // colors
@@ -19,9 +19,9 @@ const SwitchColors = () => {
                     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                     // @ts-expect-error
                     <Menu.item key={schema} onClick={() => setColorSchema(schema)}
-                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                    // @ts-expect-error
-                        leftSection={< ActionBox size="sm" radius="lg" variant="custom" backgroundColor={ColorSchema[schema][5]} />}
+                        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                        // @ts-expect-error
+                        leftSection={<ActionIcon as="div" size="sm" radius="lg" variant="custom" backgroundColor={ColorSchema[schema][5]} />}
                     >
                         {schema}
                     </Menu.item >
