@@ -1,16 +1,15 @@
 // import { ReactNode } from "react";
 import type { PhantomStyleProps } from "./style-props";
-import type { PhantomSize } from "./size";
+import type { PhantomSize, ActionIconVariant, TextVariant } from "./types";
 
 export interface PhantomProps extends PhantomStyleProps {
+    // as?: CommonHtmlTags | (string & NonNullable<unknown>);
 }
 
-type TextVariant = 'default' | 'gradient';
 export interface TextProps extends PhantomProps {
     variant?: TextVariant;
 }
 
-type ActionIconVariant = 'default' | 'filled' | 'light' | 'outline' | 'transparent' | 'white' | 'custom';
 export interface ActionIconProps extends PhantomProps {
     size?: PhantomSize | number | (string & NonNullable<unknown>);
 

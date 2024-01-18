@@ -54,6 +54,12 @@ const CustomVariant = () => {
     `;
 };
 
+const GradientVariant = () => {
+    return css`
+    background: linear-gradient(94deg, ${themeColorSchema({ dark: 9, light: 9 })} 15%, ${themeColorSchema({ dark: 4, light: 4 })} 100%);
+    `;
+};
+
 const WhiteVariant = () => {
     return css`
     color: ${themeColorSchema({ dark: 6, light: 6 })};
@@ -72,7 +78,8 @@ const Variants = () => {
                         variant === 'outline' ? OutlineVariant() :
                             variant === 'transparent' ? TransparentVariant() :
                                 variant === 'custom' ? CustomVariant() :
-                                    variant === 'white' ? WhiteVariant() : DefaultVariant()};
+                                    variant === 'gradient' ? GradientVariant() :
+                                        variant === 'white' ? WhiteVariant() : DefaultVariant()};
 `;
 }
 

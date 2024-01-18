@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
 // colors
-import { textColor } from "../../../Theme/Theme";
+import { textColor, textColorDescription } from "../../../Theme/Theme";
 import themeColorSchema from "../../../hook/ThemeHook";
 
 // type
@@ -21,9 +21,15 @@ const VariantDefault = () => {
     `;
 };
 
+const VariantDescription = () => {
+    return css`
+        color: ${textColorDescription};
+    `;
+};
+
 const Variants = () => {
     return css`
-        ${({ variant }: TextProps) => variant == 'gradient' ? VariantGradient() : VariantDefault()}
+        ${({ variant }: TextProps) => variant === 'gradient' ? VariantGradient() : variant === 'description' ? VariantDescription() : VariantDefault()}
     `
 }
 

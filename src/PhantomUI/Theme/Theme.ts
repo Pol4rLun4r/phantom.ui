@@ -38,6 +38,11 @@ export const textColor = theme('mode', {
     dark: '#b8b8b8',
 })
 
+export const textColorDescription = theme('mode', {
+    light: '#868e96',
+    dark: '#828282',
+})
+
 export const titleColor = theme('mode', {
     light: '#000000',
     dark: '#ffffff',

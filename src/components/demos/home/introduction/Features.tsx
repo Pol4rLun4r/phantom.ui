@@ -1,34 +1,38 @@
 //UI
 import Flex from "../../../../PhantomUI/Components/Layout/Flex/Flex"
-import ActionBox from "../../../../PhantomUI/Components/ActionBox/ActionBox"
 import Title from "../../../../PhantomUI/Components/Title/Title"
+import ActionIcon from "../../../../PhantomUI/Components/ActionIcon/ActionIcon"
+import Text from "../../../../PhantomUI/Components/Text/Text"
 
 //Icons
-import { IconBrandMantine } from "@tabler/icons-react"
-import { IconLicense } from "@tabler/icons-react"
-import { IconBrandSass } from "@tabler/icons-react"
+import { IconBrandMantine, IconScale, IconBrandSass } from "@tabler/icons-react"
+
+// queries
+import { useMediaQuery } from "react-responsive"
+
+// others
+import { featuresList } from "./featuresList"
+
+const iconProps = { stroke: 1.3, width: 30, height: 30, color: "white" }
 
 const Features = () => {
+    const isTablet = useMediaQuery({ query: '(max-width: 820px)' });
+
     return (
-        <Flex gap="4rem" justify="space-between">
-            <Flex direction="column" align="flex-start" gap="xs">
-                <ActionBox radius="md" size="3rem" variant="gradient">
-                    <IconLicense stroke={1.3} width={35} height={35} color="white" />
-                </ActionBox>
-                <Title as="h3" size="1rem" fontWeight="semiBold">Free and open source</Title>
-            </Flex>
-            <Flex direction="column" align="flex-start" gap="xs">
-                <ActionBox radius="md" size="3rem" variant="gradient">
-                    <IconBrandMantine stroke={1.3} width={35} height={35} color="white" />
-                </ActionBox>
-                <Title as="h3" size="1rem" fontWeight="semiBold">Inspired by Mantine UI</Title>
-            </Flex>
-            <Flex direction="column" align="flex-start" gap="xs">
-                <ActionBox radius="md" size="3rem" variant="gradient">
-                    <IconBrandSass stroke={1.3} width={35} height={35} color="white" />
-                </ActionBox>
-                <Title as="h3" size="1rem" fontWeight="semiBold">Made with styled-components</Title>
-            </Flex>
+        <Flex gap={isTablet ? "1.875rem" : "4rem"} justify="space-between" align="flex-start" direction={isTablet ? "column" : "row"}>
+            {featuresList.map((feature) => {
+                return (
+                    <Flex key={feature.icon} direction={isTablet ? "row" : "column"} align="flex-start">
+                        <ActionIcon radius="md" size="3rem" variant="gradient" as="div">
+                            {feature.icon === 'license' ? <IconScale {...iconProps} /> : feature.icon === 'mantine' ? <IconBrandMantine {...iconProps} /> : <IconBrandSass {...iconProps} />}
+                        </ActionIcon>
+                        <Flex direction="column" align="flex-start" gap="0.25rem">
+                            <Title as="h3" fontSize="1rem" fontWeight="semiBold">{feature.title}</Title>
+                            <Text fontSize="sm" variant="description">{feature.description}</Text>
+                        </Flex>
+                    </Flex>
+                )
+            })}
         </Flex>
     )
 }

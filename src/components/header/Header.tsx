@@ -10,7 +10,7 @@ import ActionIcon from "../../PhantomUI/Components/ActionIcon/ActionIcon";
 import Menu from "../../PhantomUI/Components/Menu/Menu";
 
 // icon
-import { IconGhost3, IconPalette } from '@tabler/icons-react';
+import { IconGhost3, IconPalette, IconBrandGithub } from '@tabler/icons-react';
 import SwitchTheme from "./switchTheme/SwitchTheme";
 
 const Header = () => {
@@ -24,14 +24,19 @@ const Header = () => {
                     <Title fontWeight="bold" as="h2">Phantom</Title>
                 </Group>
                 <Group gap="sm">
-                    <Menu activeMenu={<ActionIcon size="lg" radius="md"><IconPalette stroke={1.5} /></ActionIcon>}>
-                        <Menu.label>Colors</Menu.label>
-                        <SwitchColors/>
-                    </Menu>
-                    <SwitchTheme />
-                </Group>
+                    <ActionIcon size="lg" radius="md" 
+                        as="a"
+                        href="https://github.com/Pol4rLun4r/phantom.ui"
+                        target="_blank"
+                    ><IconBrandGithub stroke={1.5}/></ActionIcon>
+                <Menu activeMenu={<ActionIcon size="lg" radius="md"><IconPalette stroke={1.5} /></ActionIcon>}>
+                    <Menu.label>Colors</Menu.label>
+                    <SwitchColors />
+                </Menu>
+                <SwitchTheme />
             </Group>
-        </HeaderStyle>
+        </Group>
+        </HeaderStyle >
     )
 }
 

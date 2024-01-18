@@ -13,7 +13,7 @@ const Size = () => {
             size === 'sm' ? $FontSize.sm :
                 size === 'md' ? $FontSize.md :
                     size === 'lg' ? $FontSize.lg :
-                        size === 'xl' ? $FontSize.xl : $FontSize.sm};
+                        size === 'xl' ? $FontSize.xl : size};
 
     height: ${({ size }: ActionIconProps) => size === 'xs' ? IconSize.xs :
             size === 'sm' ? IconSize.sm :
@@ -22,6 +22,12 @@ const Size = () => {
                         size === 'xl' ? IconSize.xl : size};
 
     width: ${({ size }: ActionIconProps) => size === 'xs' ? IconSize.xs :
+            size === 'sm' ? IconSize.sm :
+                size === 'md' ? IconSize.md :
+                    size === 'lg' ? IconSize.lg :
+                        size === 'xl' ? IconSize.xl : size};
+
+    min-width: ${({ size }: ActionIconProps) => size === 'xs' ? IconSize.xs :
             size === 'sm' ? IconSize.sm :
                 size === 'md' ? IconSize.md :
                     size === 'lg' ? IconSize.lg :

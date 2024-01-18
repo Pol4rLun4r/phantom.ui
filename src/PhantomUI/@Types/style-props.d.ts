@@ -1,8 +1,8 @@
-import type { PhantomSize } from "./size";
+import type { PhantomSize } from "./types";
 import type { PhantomFontWeight } from "./typography";
 
 export interface PhantomStyleProps {
-    direction?: React.CSSProperties['flexDirection'];
+    direction?: React.CSSProperties['flexDirection'] | (string & NonNullable<unknown>);
     justify?: React.CSSProperties['justifyContent'];
     align?: React.CSSProperties['alignItems'];
     gap?: PhantomSize | (string & NonNullable<unknown>);
