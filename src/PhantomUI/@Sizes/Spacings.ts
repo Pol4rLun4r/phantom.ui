@@ -1,4 +1,4 @@
-export const Spacing = {
+export const $Spacing = {
     xs: '0.625rem',
     sm: '0.75rem',
     md: '1rem',

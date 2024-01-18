@@ -1,7 +1,6 @@
 import { css } from "styled-components";
 
-// interface
-import { IButton } from "../interface";
+import type { ButtonProps } from "../../../@Types/props";
 
 // colors
 import { buttonBackground, buttonBorder } from "../../../Theme/Theme";
@@ -49,24 +48,39 @@ const TransparentVariant = () => {
     `;
 };
 
+const CustomVariant = () => {
+    return css`
+    background-color: ${({ backgroundColor }: ButtonProps) => backgroundColor ? backgroundColor : 'white'};
+    `;
+};
+
+const GradientVariant = () => {
+    return css`
+    color: white;
+    background: linear-gradient(94deg, ${themeColorSchema({ dark: 9, light: 9 })} 15%, ${themeColorSchema({ dark: 4, light: 4 })} 100%);
+    `;
+};
+
 const WhiteVariant = () => {
     return css`
     color: ${themeColorSchema({ dark: 6, light: 6 })};
     background-color: white;
 
-    ${(props) => props.theme.mode === 'light' ? 'border: solid 1px #ced4da;' :  ''};
+    ${(props) => props.theme.mode === 'light' ? 'border: solid 1px #ced4da;' : ''};
     `;
 };
 
 const Variants = () => {
     return css`
-    ${({ $style }: IButton) =>
-            $style?.variant === 'default' ? DefaultVariant() :
-                $style?.variant === 'filled' ? FilledVariant() :
-                    $style?.variant === 'light' ? LightVariant() :
-                        $style?.variant === 'outline' ? OutlineVariant() :
-                            $style?.variant === 'transparent' ? TransparentVariant() :
-                                $style?.variant === 'white' ? WhiteVariant() : DefaultVariant()};
+    ${({ variant }: ButtonProps) =>
+            variant === 'default' ? DefaultVariant() :
+                variant === 'filled' ? FilledVariant() :
+                    variant === 'light' ? LightVariant() :
+                        variant === 'outline' ? OutlineVariant() :
+                            variant === 'transparent' ? TransparentVariant() :
+                                variant === 'custom' ? CustomVariant() :
+                                    variant === 'gradient' ? GradientVariant() :
+                                        variant === 'white' ? WhiteVariant() : DefaultVariant()};
 `;
 }
 

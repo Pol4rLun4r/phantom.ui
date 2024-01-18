@@ -1,19 +1,34 @@
 import styled from "styled-components";
 
+// type
+import type { ButtonProps } from "../../../@Types/props";
+
+// style
+import Style from "../../../Style/Style";
+
 // settings
-import { Size, BorderRadius, DefaultSetting } from "./Settings";
+import { Size } from "./Size";
 
 // variants
 import Variants from "./Variants";
-
 const ButtonStyle = styled.button`
-    // settings
-    ${DefaultSetting()}
-    ${BorderRadius()}
-    ${Size()}
+    ${Style()}
+    
+    // default
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    // variants
+    ${({ fontWeight }: ButtonProps) => fontWeight ? '' : 'font-weight: 600;'};
+    
+    appearance: none;
+    border-style: none;
+    cursor: pointer;
+
+
+    // settings
     ${Variants()}
+    ${Size()}
 `
 
 export default ButtonStyle;

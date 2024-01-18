@@ -1,5 +1,5 @@
 // altura total do botão
-export const Heights = {
+export const $Heights = {
     xs: '1.875rem',
     sm: '2.25rem',
     md: '2.625rem',
@@ -8,7 +8,7 @@ export const Heights = {
 }
 
 // paddings laterais do botão
-export const Paddings = {
+export const $Paddings = {
     xs: '0.875rem',
     sm: '1.125rem',
     md: '1.375rem',
@@ -17,7 +17,7 @@ export const Paddings = {
 }
 
 // tamanho do ActionIcon
-export const IconSize = {
+export const $IconSize = {
     xs: '1.125rem',
     sm: '1.375rem',
     md: '1.75rem',

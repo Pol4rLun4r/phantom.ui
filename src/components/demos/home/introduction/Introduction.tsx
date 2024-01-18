@@ -2,6 +2,7 @@
 import Title from "../../../../PhantomUI/Components/Title/Title";
 import Text from "../../../../PhantomUI/Components/Text/Text";
 import Stack from "../../../../PhantomUI/Components/Layout/Stack/Stack";
+import Button from "../../../../PhantomUI/Components/Button/Button";
 
 // styled
 import Section from "../style/section";
@@ -35,10 +36,12 @@ const Introduction = () => {
                     components
                 </Title>
                 <Text fontSize="xl" textAlign="initial" maxWidth="50rem">
-                    {/* This is the start of a new project, a minimalist UI, based on Mantine UI, this project will include several interface components, made with Styled-Components, for more, see my GitHub. */}
                     Build fully functional web applications in a simple way – Phantom must include numerous customizable components for your convenience and ease of work
                 </Text>
                 <Features />
+                <Button size="xl" variant="gradient" fontWeight={700} radius="md" >
+                    Get Started
+                </Button>
             </Stack>
         </Section>
     )

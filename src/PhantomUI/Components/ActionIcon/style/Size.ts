@@ -2,7 +2,7 @@ import { css } from "styled-components";
 
 // size
 import { $FontSize } from "../../../@Sizes/Typography";
-import { IconSize } from "../../../@Sizes/Buttons";
+import { $IconSize } from "../../../@Sizes/Buttons";
 
 // type
 import type { ActionIconProps } from "../../../@Types/props";
@@ -15,23 +15,23 @@ const Size = () => {
                     size === 'lg' ? $FontSize.lg :
                         size === 'xl' ? $FontSize.xl : size};
 
-    height: ${({ size }: ActionIconProps) => size === 'xs' ? IconSize.xs :
-            size === 'sm' ? IconSize.sm :
-                size === 'md' ? IconSize.md :
-                    size === 'lg' ? IconSize.lg :
-                        size === 'xl' ? IconSize.xl : size};
+    height: ${({ size }: ActionIconProps) => size === 'xs' ? $IconSize.xs :
+            size === 'sm' ? $IconSize.sm :
+                size === 'md' ? $IconSize.md :
+                    size === 'lg' ? $IconSize.lg :
+                        size === 'xl' ? $IconSize.xl : size};
 
-    width: ${({ size }: ActionIconProps) => size === 'xs' ? IconSize.xs :
-            size === 'sm' ? IconSize.sm :
-                size === 'md' ? IconSize.md :
-                    size === 'lg' ? IconSize.lg :
-                        size === 'xl' ? IconSize.xl : size};
+    width: ${({ size }: ActionIconProps) => size === 'xs' ? $IconSize.xs :
+            size === 'sm' ? $IconSize.sm :
+                size === 'md' ? $IconSize.md :
+                    size === 'lg' ? $IconSize.lg :
+                        size === 'xl' ? $IconSize.xl : size};
 
-    min-width: ${({ size }: ActionIconProps) => size === 'xs' ? IconSize.xs :
-            size === 'sm' ? IconSize.sm :
-                size === 'md' ? IconSize.md :
-                    size === 'lg' ? IconSize.lg :
-                        size === 'xl' ? IconSize.xl : size};
+    min-width: ${({ size }: ActionIconProps) => size === 'xs' ? $IconSize.xs :
+            size === 'sm' ? $IconSize.sm :
+                size === 'md' ? $IconSize.md :
+                    size === 'lg' ? $IconSize.lg :
+                        size === 'xl' ? $IconSize.xl : size};
     `;
 
 };

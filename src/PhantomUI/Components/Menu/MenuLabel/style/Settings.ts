@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
 // sizes
-import { Heights, Paddings } from "../../../../@Sizes/Buttons";
+import { $Heights, $Paddings } from "../../../../@Sizes/Buttons";
 import { $FontSize } from "../../../../@Sizes/Typography";
 
 // colors
@@ -11,9 +11,9 @@ export const Size = () => {
     return css`
     font-size: ${$FontSize.xs};
 
-    height: calc( ${Heights.xs} / 1.2);
+    height: calc( ${$Heights.xs} / 1.2);
 
-    padding: ${Paddings.xs};
+    padding: ${$Paddings.xs};
     `;
 };
 

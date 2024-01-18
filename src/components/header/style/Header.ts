@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { bodyColor } from "../../../PhantomUI/Theme/Theme";
 
 // sizes
-import { Spacing } from "../../../PhantomUI/@Sizes/Spacings";
+import { $Spacing } from "../../../PhantomUI/@Sizes/Spacings";
 
 // border color
 import theme from "styled-theming";
@@ -23,7 +23,7 @@ const HeaderStyle = styled.header`
     background-color: ${bodyColor};
 
     border-bottom: 0.0625rem solid ${borderHeader};
-    padding: 0rem ${Spacing.md};
+    padding: 0rem ${$Spacing.md};
 `
 
 export default HeaderStyle;

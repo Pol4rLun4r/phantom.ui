@@ -1,8 +1,8 @@
 import { css } from "styled-components";
 
 // sizes
-import { Heights, Paddings } from "../../../../@Sizes/Buttons";
-import { Radius } from "../../../../@Sizes/Radius";
+import { $Heights, $Paddings } from "../../../../@Sizes/Buttons";
+import { $Radius } from "../../../../@Sizes/Radius";
 import { $FontSize } from "../../../../@Sizes/Typography";
 
 // colors
@@ -12,11 +12,11 @@ export const Size = () => {
     return css`
     font-size: ${$FontSize.sm};
 
-    height: ${Heights.xs};
+    height: ${$Heights.xs};
 
-    border-radius: ${Radius.sm};
+    border-radius: ${$Radius.sm};
 
-    padding: ${Paddings.xs};
+    padding: ${$Paddings.xs};
     `;
 };
 
