@@ -39,7 +39,7 @@ const Introduction = () => {
                     Build fully functional web applications in a simple way – Phantom must include numerous customizable components for your convenience and ease of work
                 </Text>
                 <Features />
-                <Button size="xl" variant="gradient" fontWeight={700} radius="md" >
+                <Button size="xl" variant="gradient" fontWeight={700} radius="md">
                     Get Started
                 </Button>
             </Stack>
