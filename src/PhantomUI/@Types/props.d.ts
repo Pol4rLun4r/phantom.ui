@@ -16,11 +16,16 @@ export interface ActionIconProps extends PhantomProps {
 }
 
 export interface ButtonProps extends PhantomProps, PhantomStyledComponentsProps {
-    size?: PhantomSize | number | (string & NonNullable<unknown>);
-
-    variant?: ButtonVariant;
-
+    children: ReactNode;
     onClick?: () => void;
 
-    children: ReactNode;
+    size?: PhantomSize | number | (string & NonNullable<unknown>);
+    variant?: ButtonVariant;
+
+    leftSection?: ReactNode;
+    rightSection?: ReactNode;
+}
+
+export interface LayoutComponentsProps extends PhantomProps{
+    grow?: true;
 }

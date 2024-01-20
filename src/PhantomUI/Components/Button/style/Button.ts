@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-// type
-import type { ButtonProps } from "../../../@Types/props";
-
 // style
 import Style from "../../../Style/Style";
 
@@ -19,12 +16,13 @@ const ButtonStyle = styled.button`
     justify-content: center;
     align-items: center;
 
-    ${({ fontWeight }: ButtonProps) => fontWeight ? '' : 'font-weight: 600;'};
-    
+    ${({ fontWeight }) => fontWeight ? '' : 'font-weight: 600;'};
+
     appearance: none;
     border-style: none;
     cursor: pointer;
 
+    /* white-space: nowrap; */
 
     // settings
     ${Variants()}

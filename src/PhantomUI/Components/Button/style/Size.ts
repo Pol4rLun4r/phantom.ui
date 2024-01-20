@@ -22,10 +22,17 @@ export const Size = () => {
                         size === 'xl' ? $Heights.xl :
                             typeof size === "string" ? size : $Heights.sm};
 
-    padding: ${({ size }: ButtonProps) => size === 'xs' ? $Paddings.xs :
+    ${({ padding }: ButtonProps) => padding ? '' : Padding()}
+
+    `;
+};
+
+const Padding = () => {
+    return css`
+        padding: ${({ size }: ButtonProps) => size === 'xs' ? $Paddings.xs :
             size === 'sm' ? $Paddings.sm :
                 size === 'md' ? $Paddings.md :
                     size === 'lg' ? $Paddings.lg :
                         size === 'xl' ? $Paddings.xl : $Paddings.sm};
-    `;
-};
+    `
+}

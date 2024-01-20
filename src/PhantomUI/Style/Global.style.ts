@@ -2,6 +2,10 @@ import { createGlobalStyle } from "styled-components";
 import { bodyColorTwo } from "../Theme/Theme";
 
 const GlobalStyle = createGlobalStyle`
+    :root {
+        color-scheme: ${props => props.theme.mode === "dark" ? 'dark' : 'light'};
+    }
+
     *{
         margin: 0;
         padding: 0;

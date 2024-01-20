@@ -84,6 +84,18 @@ const ColorSchema = {
     "#a83621",
     "#942b19"
   ],
+  blueGray: [
+    "#f3f3fe",
+    "#e4e6ed",
+    "#c8cad3",
+    "#a9adb9",
+    "#9093a4",
+    "#808496",
+    "#767c91",
+    "#656a7e",
+    "#585e72",
+    "#4a5167"
+  ],
 }
 
 export default ColorSchema

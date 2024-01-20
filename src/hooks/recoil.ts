@@ -10,5 +10,5 @@ export const themeMode = atom<mode>({
 
 export const colorSchemaMode = atom<colorSchema>({
     key: 'colorSchemaMode',
-    default: 'magenta'
+    default: 'blueYonder'
 })

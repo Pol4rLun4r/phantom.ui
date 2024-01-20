@@ -3,6 +3,7 @@ import Title from "../../../../PhantomUI/Components/Title/Title";
 import Text from "../../../../PhantomUI/Components/Text/Text";
 import Stack from "../../../../PhantomUI/Components/Layout/Stack/Stack";
 import Button from "../../../../PhantomUI/Components/Button/Button";
+import Group from "../../../../PhantomUI/Components/Layout/Group/Group";
 
 // styled
 import Section from "../style/section";
@@ -14,6 +15,9 @@ import Features from "./Features";
 import { useMediaQuery } from "react-responsive";
 import { useResizeDetector } from "react-resize-detector";
 
+// icons
+import { IconBrandGithub } from "@tabler/icons-react";
+
 const Introduction = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 60em)' });
     const isTablet = useMediaQuery({ query: '(min-width: 768px)' });
@@ -24,6 +28,8 @@ const Introduction = () => {
         const size = width ? ((width / 100) / 1.4) : 5;
         return size;
     }
+
+    const buttonProp: {grow: true} | object = !isTablet ? { grow: true } : {};
 
     const titleProps = { fontWeight: "black", lineHeight: 1, fontSize: `${reSize()}rem` }
 
@@ -39,9 +45,17 @@ const Introduction = () => {
                     Build fully functional web applications in a simple way – Phantom must include numerous customizable components for your convenience and ease of work
                 </Text>
                 <Features />
-                <Button size="xl" variant="gradient" fontWeight={700} radius="md">
-                    Get Started
-                </Button>
+                <Group width="100%" justify="flex-start" {...buttonProp}>
+                    <Button size="xl" variant="gradient" fontWeight={700} radius="md">Get Started</Button>
+                    <Button size="xl" variant="custom" backgroundColor="black" color="white" fontWeight={700} radius="md"
+                        leftSection={<IconBrandGithub />}
+                        as="a"
+                        href="https://github.com/Pol4rLun4r/phantom.ui"
+                        target="_ blank"
+                    >
+                        GitHub
+                    </Button>
+                </Group>
             </Stack>
         </Section>
     )
