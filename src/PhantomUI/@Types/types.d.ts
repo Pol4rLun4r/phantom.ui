@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export type PhantomSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
-export type TextVariant = 'default' | 'gradient' | 'description';
+export type TextVariant = 'default' | 'gradient' | 'description' | 'whiteText';
 
 export type ActionIconVariant = 'default' | 'filled' | 'light' | 'outline' | 'transparent' | 'white' | 'custom' | 'gradient';
 

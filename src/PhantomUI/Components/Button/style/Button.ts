@@ -22,8 +22,6 @@ const ButtonStyle = styled.button`
     border-style: none;
     cursor: pointer;
 
-    /* white-space: nowrap; */
-
     // settings
     ${Variants()}
     ${Size()}

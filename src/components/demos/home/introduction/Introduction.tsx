@@ -6,7 +6,7 @@ import Button from "../../../../PhantomUI/Components/Button/Button";
 import Group from "../../../../PhantomUI/Components/Layout/Group/Group";
 
 // styled
-import Section from "../style/section";
+import IntroductionSection from "../style/introductionSection";
 
 // components
 import Features from "./Features";
@@ -17,6 +17,9 @@ import { useResizeDetector } from "react-resize-detector";
 
 // icons
 import { IconBrandGithub } from "@tabler/icons-react";
+
+// type
+import { PhantomProps } from "../../../../PhantomUI/@Types/props";
 
 const Introduction = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 60em)' });
@@ -29,12 +32,14 @@ const Introduction = () => {
         return size;
     }
 
-    const buttonProp: {grow: true} | object = !isTablet ? { grow: true } : {};
+    const titleProps = { fontWeight: "black", lineHeight: 1, fontSize: `${reSize()}rem` };
 
-    const titleProps = { fontWeight: "black", lineHeight: 1, fontSize: `${reSize()}rem` }
+    const groupProp: { grow: true } | object = !isTablet ? { grow: true } : {};
+
+    const buttonProps: PhantomProps = { paddingLeft: '4rem', paddingRight: '3rem' };
 
     return (
-        <Section>
+        <IntroductionSection>
             <Stack padding={isMobile ? '3.75rem 1rem' : '13.75rem 1rem'} gap="xl" align="flex-start" ref={ref}>
                 <Title marginBottom={isTablet ? '1.5rem' : '0rem'} {...titleProps}>
                     A
@@ -45,9 +50,12 @@ const Introduction = () => {
                     Build fully functional web applications in a simple way – Phantom must include numerous customizable components for your convenience and ease of work
                 </Text>
                 <Features />
-                <Group width="100%" justify="flex-start" {...buttonProp}>
-                    <Button size="xl" variant="gradient" fontWeight={700} radius="md">Get Started</Button>
-                    <Button size="xl" variant="custom" backgroundColor="black" color="white" fontWeight={700} radius="md"
+                <Group width="100%" justify="flex-start" {...groupProp}>
+                    <Button size="xl" variant="gradient" fontWeight={700} radius="md" {...buttonProps}>
+                        {/* Get Started */}
+                        Coming Soon
+                    </Button>
+                    <Button size="xl" variant="custom" backgroundColor="black" color="white" fontWeight={700} radius="md" {...buttonProps}
                         leftSection={<IconBrandGithub />}
                         as="a"
                         href="https://github.com/Pol4rLun4r/phantom.ui"
@@ -57,7 +65,7 @@ const Introduction = () => {
                     </Button>
                 </Group>
             </Stack>
-        </Section>
+        </IntroductionSection>
     )
 }
 

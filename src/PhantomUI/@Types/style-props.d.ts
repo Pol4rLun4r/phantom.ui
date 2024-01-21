@@ -22,9 +22,9 @@ export interface PhantomStyleProps {
     margin?: React.CSSProperties['margin'];
 
     paddingTop?: PhantomSize | (string & NonNullable<unknown>) | React.CSSProperties['paddingTop'];
-    paddingBottom?: React.CSSProperties['paddingBottom'];
-    paddingLeft?: React.CSSProperties['paddingLeft'];
-    paddingRight?: React.CSSProperties['paddingRight'];
+    paddingBottom?: PhantomSize | React.CSSProperties['paddingBottom'];
+    paddingLeft?: PhantomSize | React.CSSProperties['paddingLeft'];
+    paddingRight?: PhantomSize | React.CSSProperties['paddingRight'];
     padding?: React.CSSProperties['padding'];
 
     radius?: PhantomSize;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 // colors
-import { bodyColor } from "../../../PhantomUI/Theme/Theme";
+import { bodyColorPrimary } from "../../../PhantomUI/Theme/Theme";
 
 // sizes
 import { $Spacing } from "../../../PhantomUI/@Sizes/Spacings";
@@ -19,8 +19,9 @@ const HeaderStyle = styled.header`
     height: 3.75rem;
 
     position: fixed;
+    z-index: 100;
 
-    background-color: ${bodyColor};
+    background-color: ${bodyColorPrimary};
 
     border-bottom: 0.0625rem solid ${borderHeader};
     padding: 0rem ${$Spacing.md};
