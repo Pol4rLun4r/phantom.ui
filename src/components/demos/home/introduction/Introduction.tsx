@@ -46,7 +46,7 @@ const Introduction = () => {
                     <Text as='span' variant="gradient" {...titleProps}> library of React  </Text>
                     components
                 </Title>
-                <Text fontSize="xl" textAlign="initial" maxWidth="50rem">
+                <Text fontSize="lg" textAlign="initial" maxWidth="50rem">
                     Build fully functional web applications in a simple way – Phantom must include numerous customizable components for your convenience and ease of work
                 </Text>
                 <Features />
