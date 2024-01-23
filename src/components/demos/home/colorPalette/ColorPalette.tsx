@@ -1,8 +1,7 @@
 // UI
-import Stack from "../../../../PhantomUI/Components/Layout/Stack/Stack";
-import Text from "../../../../PhantomUI/Components/Text/Text";
-import Title from "../../../../PhantomUI/Components/Title/Title";
-import Anchor from "../../../../PhantomUI/Components/Anchor/Anchor";
+import { Stack } from "../../../../PhantomUI/Components/@Layout";
+import { Title, Text } from "../../../../PhantomUI/Components/@Typography";
+import { Anchor } from "../../../../PhantomUI/Components/@Navigation";
 
 // styled
 import Section from "../style/section";

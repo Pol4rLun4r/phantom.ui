@@ -1,8 +1,7 @@
 // UI
-import Button from "../../../../PhantomUI/Components/Button/Button"
-import Box from "../../../../PhantomUI/Components/Layout/Box/Box";
-import Stack from "../../../../PhantomUI/Components/Layout/Stack/Stack";
-import Title from "../../../../PhantomUI/Components/Title/Title"
+import { Button } from "../../../../PhantomUI/Components/@Buttons";
+import { Box, Stack } from "../../../../PhantomUI/Components/@Layout";
+import { Title } from "../../../../PhantomUI/Components/@Typography";
 
 const Preview = () => {
     const buttonProp = { size: 'sm'};

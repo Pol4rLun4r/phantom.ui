@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 //UI
-import Stack from "../../../../PhantomUI/Components/Layout/Stack/Stack";
+import { Stack } from "../../../../PhantomUI/Components/@Layout";
 
 // color
 import { bodyColorSecondary } from "../../../../PhantomUI/Theme/Theme";

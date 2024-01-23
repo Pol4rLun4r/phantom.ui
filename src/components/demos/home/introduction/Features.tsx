@@ -1,8 +1,7 @@
 //UI
-import Flex from "../../../../PhantomUI/Components/Layout/Flex/Flex"
-import Title from "../../../../PhantomUI/Components/Title/Title"
-import ActionIcon from "../../../../PhantomUI/Components/ActionIcon/ActionIcon"
-import Text from "../../../../PhantomUI/Components/Text/Text"
+import { Flex } from "../../../../PhantomUI/Components/@Layout"
+import { ActionIcon } from "../../../../PhantomUI/Components/@Buttons"
+import { Title, Text } from "../../../../PhantomUI/Components/@Typography"
 
 //Icons
 import { IconBrandMantine, IconScale, IconBrandSass } from "@tabler/icons-react"

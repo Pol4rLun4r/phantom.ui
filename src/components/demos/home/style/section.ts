@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 //UI
-import Stack from "../../../../PhantomUI/Components/Layout/Stack/Stack";
-import Group from "../../../../PhantomUI/Components/Layout/Group/Group";
+import { Stack, Group } from "../../../../PhantomUI/Components/@Layout";
 
 // colors
 import { bodyColorPrimarySection, bodyColorSecondary } from "../../../../PhantomUI/Theme/Theme";

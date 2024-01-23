@@ -1,7 +1,6 @@
 //UI
-import Group from "../../../../PhantomUI/Components/Layout/Group/Group"
-import Stack from "../../../../PhantomUI/Components/Layout/Stack/Stack"
-import Title from "../../../../PhantomUI/Components/Title/Title"
+import { Group, Stack } from "../../../../PhantomUI/Components/@Layout"
+import { Title } from "../../../../PhantomUI/Components/@Typography"
 
 // colors
 import ColorSchema from "../../../../PhantomUI/Theme/Colors"

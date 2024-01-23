@@ -4,10 +4,10 @@ import HeaderStyle from "./style/Header";
 import SwitchColors from "./switchColors/SwitchColors";
 
 // UI
-import Group from "../../PhantomUI/Components/Layout/Group/Group";
-import Title from "../../PhantomUI/Components/Title/Title";
-import ActionIcon from "../../PhantomUI/Components/ActionIcon/ActionIcon";
-import Menu from "../../PhantomUI/Components/Menu/Menu";
+import { Group } from "../../PhantomUI/Components/@Layout";
+import { ActionIcon } from "../../PhantomUI/Components/@Buttons";
+import { Title } from "../../PhantomUI/Components/@Typography";
+import { Menu } from "../../PhantomUI/Components/@Overlays";
 
 // icon
 import { IconGhost3, IconPalette, IconBrandGithub } from '@tabler/icons-react';

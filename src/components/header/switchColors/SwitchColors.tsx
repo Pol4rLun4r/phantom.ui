@@ -1,6 +1,6 @@
 // UI
-import ActionIcon from "../../../PhantomUI/Components/ActionIcon/ActionIcon"
-import Menu from "../../../PhantomUI/Components/Menu/Menu"
+import { ActionIcon } from "../../../PhantomUI/Components/@Buttons"
+import { Menu } from "../../../PhantomUI/Components/@Overlays"
 
 // colors
 import ColorSchema from "../../../PhantomUI/Theme/Colors"

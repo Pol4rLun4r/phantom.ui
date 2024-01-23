@@ -2,7 +2,7 @@
 import { IconMoon, IconSunHigh } from '@tabler/icons-react';
 
 // components
-import ActionIcon from '../../../PhantomUI/Components/ActionIcon/ActionIcon';
+import { ActionIcon } from '../../../PhantomUI/Components/@Buttons';
 
 // recoil StateManage
 import { useRecoilState } from 'recoil'

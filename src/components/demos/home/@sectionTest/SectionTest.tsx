@@ -1,5 +1,5 @@
 // UI
-import Title from "../../../../PhantomUI/Components/Title/Title";
+import { Title } from "../../../../PhantomUI/Components/@Typography";
 
 // styled
 import Section from "../style/section";

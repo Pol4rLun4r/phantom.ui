@@ -1,9 +1,7 @@
 // UI
-import Title from "../../../../PhantomUI/Components/Title/Title";
-import Text from "../../../../PhantomUI/Components/Text/Text";
-import Stack from "../../../../PhantomUI/Components/Layout/Stack/Stack";
-import Button from "../../../../PhantomUI/Components/Button/Button";
-import Group from "../../../../PhantomUI/Components/Layout/Group/Group";
+import { Title, Text } from "../../../../PhantomUI/Components/@Typography";
+import { Stack, Group } from "../../../../PhantomUI/Components/@Layout";
+import { Button } from "../../../../PhantomUI/Components/@Buttons";
 
 // styled
 import IntroductionSection from "../style/introductionSection";
