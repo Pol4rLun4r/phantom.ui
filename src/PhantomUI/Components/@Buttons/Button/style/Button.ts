@@ -25,6 +25,8 @@ const ButtonStyle = styled.button`
     // settings
     ${Variants()}
     ${Size()}
+
+    ${({fullWidth }) => fullWidth ? 'width: 100%' : ''};
 `
 
 export default ButtonStyle;

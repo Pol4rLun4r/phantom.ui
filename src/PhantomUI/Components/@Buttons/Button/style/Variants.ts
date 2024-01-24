@@ -54,10 +54,20 @@ const CustomVariant = () => {
     `;
 };
 
+const customGradient = ({gradient}: ButtonProps) => {
+    return css`
+        background: linear-gradient(${gradient!.deg}deg, ${gradient!.from} 0%, ${gradient!.to} 100%);
+    `
+}
+const defaultGradient = () => {
+    return css`
+        background: linear-gradient(94deg, ${themeColorSchema({ dark: 9, light: 7 })} 0%, ${themeColorSchema({ dark: 4, light: 4 })} 100%);
+    `
+}
 const GradientVariant = () => {
     return css`
     color: white;
-    background: linear-gradient(94deg, ${themeColorSchema({ dark: 9, light: 9 })} 15%, ${themeColorSchema({ dark: 4, light: 4 })} 100%);
+    ${({ gradient }: ButtonProps) => gradient ? customGradient({gradient}) : defaultGradient()}
     `;
 };
 
