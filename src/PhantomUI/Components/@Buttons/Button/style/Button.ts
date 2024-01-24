@@ -8,6 +8,8 @@ import { Size } from "./Size";
 
 // variants
 import Variants from "./Variants";
+import { BorderRadiusGroup } from "../../../../Style/size/RadiusGroup.style";
+
 const ButtonStyle = styled.button`
     ${Style()}
     
@@ -26,7 +28,20 @@ const ButtonStyle = styled.button`
     ${Variants()}
     ${Size()}
 
-    ${({fullWidth }) => fullWidth ? 'width: 100%' : ''};
+    ${({ fullWidth }) => fullWidth ? 'width: 100%' : ''};
+`
+
+export const ButtonGroupStyle = styled.div`
+        ${Style()}
+
+        // default
+        display: flex;
+        flex-direction: ${({ direction }) => direction ? direction : 'row'};
+        ${({ gap }) => gap ? '' : 'gap: 0rem;'};
+        ${ButtonStyle} {
+            border-radius: 0rem;
+            ${BorderRadiusGroup()}
+        }
 `
 
 export default ButtonStyle;

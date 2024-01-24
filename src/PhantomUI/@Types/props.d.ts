@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import type { PhantomStyleProps } from "./style-props";
 import type { PhantomSize, ActionIconVariant, TextVariant, ButtonVariant, PhantomStyledComponentsProps } from "./types";
 
-export interface PhantomProps extends PhantomStyleProps {
+export interface PhantomProps extends PhantomStyleProps, PhantomStyledComponentsProps {
 }
 
 export interface TextProps extends PhantomProps {
@@ -15,7 +15,7 @@ export interface ActionIconProps extends PhantomProps {
     variant?: ActionIconVariant;
 }
 
-export interface ButtonProps extends PhantomProps, PhantomStyledComponentsProps {
+export interface ButtonProps extends PhantomProps {
     children?: ReactNode;
     onClick?: () => void;
 
@@ -27,6 +27,12 @@ export interface ButtonProps extends PhantomProps, PhantomStyledComponentsProps 
     rightSection?: ReactNode;
 
     fullWidth?: true;
+
+    disabled?: true;
+}
+
+export interface ButtonGroupProps extends PhantomProps {
+    children?: ReactNode;
 }
 
 export interface LayoutComponentsProps extends PhantomProps {

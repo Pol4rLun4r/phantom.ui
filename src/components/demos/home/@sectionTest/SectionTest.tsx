@@ -16,12 +16,26 @@ const SectionTest = () => {
         <Section background="secondary">
             <Stack width="100%" gap="xl" paddingLeft="md" paddingRight="md" align="flex-start">
                 <Title fontWeight="black" fontSize="2.225rem" textTransform="uppercase">Section Test</Title>
-                <Button variant="gradient" gap="xs"
-                    leftSection={<IconBrand4chan width={18}/>}
-                    rightSection={<IconArrowRight width={18}/>}
+                <Button.Group radius="md">
+                    <Button gap="xs"
+                        leftSection={<IconBrand4chan width={18} />}
+                        rightSection={<IconArrowRight width={18} />}
                     >
-                    Visit my WebSite
-                </Button>
+                        Visit my WebSite
+                    </Button>
+                    <Button gap="xs"
+                        leftSection={<IconBrand4chan width={18} />}
+                        rightSection={<IconArrowRight width={18} />}
+                    >
+                        do not visit my website
+                    </Button>
+                    <Button gap="xs"
+                        leftSection={<IconBrand4chan width={18} />}
+                        rightSection={<IconArrowRight width={18} />}
+                    >
+                        Visit my WebSite
+                    </Button>
+                </Button.Group>
             </Stack>
         </Section>
     )

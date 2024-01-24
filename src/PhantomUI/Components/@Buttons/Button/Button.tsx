@@ -4,6 +4,9 @@ import ButtonStyle from "./style/Button"
 // type
 import type { ButtonProps } from "../../../@Types/props"
 
+//components
+import ButtonGroup from "./ButtonGroup"
+
 
 const Button = (props: ButtonProps) => {
     return (
@@ -15,4 +18,6 @@ const Button = (props: ButtonProps) => {
     )
 }
 
-export default Button
+Button.Group = ButtonGroup;
+
+export default Button;

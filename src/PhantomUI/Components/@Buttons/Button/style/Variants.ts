@@ -3,7 +3,7 @@ import { css } from "styled-components";
 import type { ButtonProps } from "../../../../@Types/props";
 
 // colors
-import { buttonBackground, buttonBorder } from "../../../../Theme/Theme";
+import { buttonBackground, buttonBackgroundDisabled, buttonBorder, buttonColorDisabled } from "../../../../Theme/Theme";
 import themeColorSchema from "../../../../hook/ThemeHook";
 
 const DefaultVariant = () => {
@@ -54,7 +54,7 @@ const CustomVariant = () => {
     `;
 };
 
-const customGradient = ({gradient}: ButtonProps) => {
+const customGradient = ({ gradient }: ButtonProps) => {
     return css`
         background: linear-gradient(${gradient!.deg}deg, ${gradient!.from} 0%, ${gradient!.to} 100%);
     `
@@ -67,7 +67,7 @@ const defaultGradient = () => {
 const GradientVariant = () => {
     return css`
     color: white;
-    ${({ gradient }: ButtonProps) => gradient ? customGradient({gradient}) : defaultGradient()}
+    ${({ gradient }: ButtonProps) => gradient ? customGradient({ gradient }) : defaultGradient()}
     `;
 };
 
@@ -80,17 +80,26 @@ const WhiteVariant = () => {
     `;
 };
 
+const buttonDisabled = () => {
+    return css`
+    background-color: ${buttonBackgroundDisabled};
+    color: ${buttonColorDisabled};
+    cursor: not-allowed;  
+    `;
+};
+
 const Variants = () => {
     return css`
-    ${({ variant }: ButtonProps) =>
-            variant === 'default' ? DefaultVariant() :
-                variant === 'filled' ? FilledVariant() :
-                    variant === 'light' ? LightVariant() :
-                        variant === 'outline' ? OutlineVariant() :
-                            variant === 'transparent' ? TransparentVariant() :
-                                variant === 'custom' ? CustomVariant() :
-                                    variant === 'gradient' ? GradientVariant() :
-                                        variant === 'white' ? WhiteVariant() : DefaultVariant()};
+    ${({ variant, disabled }: ButtonProps) =>
+            disabled ? buttonDisabled() :
+                variant === 'default' ? DefaultVariant() :
+                    variant === 'filled' ? FilledVariant() :
+                        variant === 'light' ? LightVariant() :
+                            variant === 'outline' ? OutlineVariant() :
+                                variant === 'transparent' ? TransparentVariant() :
+                                    variant === 'custom' ? CustomVariant() :
+                                        variant === 'gradient' ? GradientVariant() :
+                                            variant === 'white' ? WhiteVariant() : DefaultVariant()};
 `;
 }
 
