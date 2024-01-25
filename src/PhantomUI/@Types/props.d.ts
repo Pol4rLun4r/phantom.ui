@@ -17,7 +17,6 @@ export interface ActionIconProps extends PhantomProps {
 
 export interface ButtonProps extends PhantomProps {
     children?: ReactNode;
-    onClick?: () => void;
 
     size?: PhantomSize | number | (string & NonNullable<unknown>);
     variant?: ButtonVariant;
@@ -37,4 +36,14 @@ export interface ButtonGroupProps extends PhantomProps {
 
 export interface LayoutComponentsProps extends PhantomProps {
     grow?: true;
+}
+
+export interface ImageProps extends PhantomProps {
+    objectFit?: React.CSSProperties['objectFit'];
+    withBorder?: true;
+}
+
+export interface CardProps extends PhantomProps {
+    children?: ReactNode;
+    withBorder?: true;
 }

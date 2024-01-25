@@ -73,6 +73,6 @@ const DirectionRow = () => {
 
 export const BorderRadiusGroup = () => {
     return css`
-            ${({ direction }: PhantomStyleProps) => direction === 'column' ? DirectionColumn() : DirectionRow()}
+            ${({ direction }: PhantomStyleProps) => direction === 'row' ? DirectionRow() : DirectionColumn()}
     `;
 };

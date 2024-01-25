@@ -10,7 +10,7 @@ import ButtonGroup from "./ButtonGroup"
 
 const Button = (props: ButtonProps) => {
     return (
-        <ButtonStyle {...props} onClick={() => props.onClick ? props.onClick() : ''}>
+        <ButtonStyle {...props}>
             {props.leftSection}
             {props.children}
             {props.rightSection}

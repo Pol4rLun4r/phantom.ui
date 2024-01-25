@@ -25,7 +25,7 @@ export interface PhantomStyleProps {
     paddingBottom?: PhantomSize | React.CSSProperties['paddingBottom'];
     paddingLeft?: PhantomSize | React.CSSProperties['paddingLeft'];
     paddingRight?: PhantomSize | React.CSSProperties['paddingRight'];
-    padding?: React.CSSProperties['padding'];
+    padding?: PhantomSize | React.CSSProperties['padding'];
 
     radius?: PhantomSize;
 

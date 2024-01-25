@@ -50,7 +50,6 @@ const Introduction = () => {
                 <Features />
                 <Group width="100%" justify="flex-start" {...groupProp}>
                     <Button size="xl" variant="gradient" fontWeight={700} radius="md" {...buttonProps}>
-                        {/* Get Started */}
                         Coming Soon
                     </Button>
                     <Button size="xl" variant="custom" backgroundColor="black" color="white" fontWeight={700} radius="md" {...buttonProps}

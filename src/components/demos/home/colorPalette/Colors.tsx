@@ -26,7 +26,7 @@ const Colors = () => {
 
     return (
         <Stack>
-            <Title as="h2" fontWeight="bold">Colors</Title>
+            <Title as="div" fontWeight="bold">Colors</Title>
             <Group gap="0rem" height={reSize()} ref={ref}>
                 <ColorContainer>
                     {ColorSchema[colorPalette].map((color, length) => {

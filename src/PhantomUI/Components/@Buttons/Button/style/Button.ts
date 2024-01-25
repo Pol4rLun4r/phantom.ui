@@ -8,6 +8,8 @@ import { Size } from "./Size";
 
 // variants
 import Variants from "./Variants";
+
+// size
 import { BorderRadiusGroup } from "../../../../Style/size/RadiusGroup.style";
 
 const ButtonStyle = styled.button`
@@ -36,7 +38,7 @@ export const ButtonGroupStyle = styled.div`
 
         // default
         display: flex;
-        flex-direction: ${({ direction }) => direction ? direction : 'row'};
+        flex-direction: ${({ direction }) => direction ? direction : 'column'};
         ${({ gap }) => gap ? '' : 'gap: 0rem;'};
         ${ButtonStyle} {
             border-radius: 0rem;

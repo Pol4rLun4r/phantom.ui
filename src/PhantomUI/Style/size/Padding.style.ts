@@ -32,7 +32,10 @@ export const Padding = () => {
                     paddingRight === 'lg' ? $Spacing.lg :
                         paddingRight === 'xl' ? $Spacing.xl : paddingRight};        
 
-    padding: ${({ padding }: PhantomStyleProps) => padding};
-
+    padding: ${({ padding }: PhantomStyleProps) => padding === 'xs' ? $Spacing.xs :
+            padding === 'sm' ? $Spacing.sm :
+                padding === 'md' ? $Spacing.md :
+                    padding === 'lg' ? $Spacing.lg :
+                        padding === 'xl' ? $Spacing.xl : padding};
     `;
 };
