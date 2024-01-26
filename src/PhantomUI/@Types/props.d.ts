@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import type { PhantomStyleProps } from "./style-props";
-import type { PhantomSize, ActionIconVariant, TextVariant, ButtonVariant, PhantomStyledComponentsProps } from "./types";
+import type { PhantomSize, ActionIconVariant, TextVariant, ButtonVariant, PhantomStyledComponentsProps, BadgeVariant } from "./types";
 
 export interface PhantomProps extends PhantomStyleProps, PhantomStyledComponentsProps {
 }
@@ -20,7 +20,7 @@ export interface ButtonProps extends PhantomProps {
 
     size?: PhantomSize | number | (string & NonNullable<unknown>);
     variant?: ButtonVariant;
-    gradient?: { from: string, to: string, deg: number }
+    gradient?: { from: string, to: string, deg: number };
 
     leftSection?: ReactNode;
     rightSection?: ReactNode;
@@ -46,4 +46,17 @@ export interface ImageProps extends PhantomProps {
 export interface CardProps extends PhantomProps {
     children?: ReactNode;
     withBorder?: true;
+}
+
+export interface BadgeProps extends PhantomProps {
+    children?: ReactNode;
+
+    size?: PhantomSize;
+    variant?: BadgeVariant;
+    gradient?: { from: string, to: string, deg: number };
+
+    leftSection?: ReactNode;
+    rightSection?: ReactNode;
+
+    fullWidth?: true;
 }

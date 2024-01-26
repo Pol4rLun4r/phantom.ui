@@ -11,7 +11,6 @@ export const bodyColorPrimarySection = theme('mode', {
     dark: '#242424',
 });
 
-
 export const bodyColorSecondary = theme('mode', {
     light: '#ffffff',
     dark: '#1f1f1f',
@@ -127,3 +126,10 @@ export const cardBorder = theme('mode', {
 //     light: '#ffffff',
 //     dark: '	##2e2e2e'
 // })
+
+// badge
+
+export const bodyBadge = theme('mode', {
+    light: '#ffffff',
+    dark: '#3b3b3b',
+})

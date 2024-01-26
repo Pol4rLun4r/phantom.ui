@@ -9,6 +9,8 @@ export type CommonHtmlTags = 'a' | 'article' | 'button' | 'div' | 'footer' | 'fo
 
 export type ButtonVariant = ActionIconVariant;
 
+export type BadgeVariant = ActionIconVariant | 'dot';
+
 export interface PhantomStyledComponentsProps extends React.BaseHTMLAttributes<T> {
     as?: CommonHtmlTags;
 }
