@@ -1,5 +1,5 @@
 // UI
-import { Stack } from "../../../../PhantomUI/Components/@Layout";
+import { Group, Stack } from "../../../../PhantomUI/Components/@Layout";
 import { Title } from "../../../../PhantomUI/Components/@Typography";
 
 // @TestUI 
@@ -16,7 +16,9 @@ const SectionTest = () => {
             <Stack width="100%" gap="xl" paddingLeft="md" paddingRight="md" align="flex-start">
                 <Title fontWeight="black" fontSize="2.225rem" textTransform="uppercase">Section Test</Title>
                 {/* Test Area  */}
-                <Badge variant="dot" radius="lg" size="lg">Badge</Badge>
+                <Group width="100%">
+                    <Badge variant="dot" radius="lg" size="lg">Loading...</Badge>
+                </Group>
             </Stack>
         </Section>
     )
