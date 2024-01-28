@@ -60,3 +60,10 @@ export interface BadgeProps extends PhantomProps {
 
     fullWidth?: true;
 }
+
+export interface TooltipProps extends PhantomProps {
+    children?: ReactNode;
+
+    label: string | number;
+    withArrow?: true;
+}

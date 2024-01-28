@@ -1,5 +1,10 @@
 import { createGlobalStyle } from "styled-components";
+
+// colors
 import { bodyColorPrimary } from "../Theme/Theme";
+
+// style
+import { ArrowTooltip } from "../Components/@Overlays/Tooltip/style/Tooltip";
 
 const GlobalStyle = createGlobalStyle`
     :root {
@@ -27,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
     }
 
+    ${ArrowTooltip()}
 `
 
 export default GlobalStyle;
