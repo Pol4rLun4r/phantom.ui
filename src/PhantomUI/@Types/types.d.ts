@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { AllHTMLAttributes } from "react";
+
 export type PhantomSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export type TextVariant = 'default' | 'gradient' | 'description' | 'whiteText';
@@ -11,6 +13,6 @@ export type ButtonVariant = ActionIconVariant;
 
 export type BadgeVariant = ActionIconVariant | 'dot';
 
-export interface PhantomStyledComponentsProps extends React.BaseHTMLAttributes<T> {
-    as?: CommonHtmlTags;
+export interface PhantomStyledComponentsProps extends AllHTMLAttributes<T>{
+    as?: any;
 }

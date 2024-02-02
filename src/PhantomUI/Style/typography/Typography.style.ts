@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
 // type
-import type { PhantomProps } from "../../@Types/props";
+import type { PhantomStyleProps } from "../../@Types/style-props";
 
 
 // size
@@ -9,7 +9,7 @@ import { $FontSize } from "../../@Sizes/Typography";
 
 export const FontSize = () => {
     return css`
-    font-size: ${({ fontSize }: PhantomProps) => fontSize === 'xs' ? $FontSize.xs :
+    font-size: ${({ fontSize }: PhantomStyleProps) => fontSize === 'xs' ? $FontSize.xs :
             fontSize === 'sm' ? $FontSize.sm :
                 fontSize === 'md' ? $FontSize.md :
                     fontSize === 'lg' ? $FontSize.lg :
@@ -20,7 +20,7 @@ export const FontSize = () => {
 
 export const FontWeight = () => {
     return css`
-        font-weight: ${({ fontWeight }: PhantomProps) => fontWeight === "black" ? 900 :
+        font-weight: ${({ fontWeight }: PhantomStyleProps) => fontWeight === "black" ? 900 :
             fontWeight === "bold" ? 700 :
                 fontWeight === "semiBold" ? 600 :
                     fontWeight === "regular" ? 400 :

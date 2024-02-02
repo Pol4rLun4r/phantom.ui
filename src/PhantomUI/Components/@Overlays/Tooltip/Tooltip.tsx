@@ -6,6 +6,9 @@ import type { TooltipProps } from "../../../@Types/props"
 // style
 import TooltipStyle from "./style/Tooltip";
 
+// motion
+import { AnimatePresence } from "framer-motion";
+
 const Tooltip = (props: TooltipProps) => {
 
     const [isOver, hoverProps] = useHover({ delayEnter: 100, delayLeave: 300 });
@@ -16,23 +19,30 @@ const Tooltip = (props: TooltipProps) => {
         triggerOffset: props.withArrow ? 14 : 8,
     });
 
-    return (   
+    return (
         <>
             <span {...triggerProps} {...hoverProps}>
                 {props.children}
             </span>
             {renderLayer(
-                isOver && (
-                    <TooltipStyle {...layerProps} {...props}>
-                        {props.label}
-                        <Arrow
-                            id="tooltip"
-                            {...arrowProps}
-                            borderWidth={1}
-                            size={6}
-                        />
-                    </TooltipStyle>
-                )
+                <AnimatePresence>
+                    {isOver && (
+                        <TooltipStyle {...layerProps} {...props}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            transition={{ duration: 0.1 }}
+                        >
+                            {props.label}
+                            <Arrow
+                                id="tooltip"
+                                {...arrowProps}
+                                borderWidth={1}
+                                size={6}
+                            />
+                        </TooltipStyle>
+                    )}
+                </AnimatePresence>
             )}
         </>
     )

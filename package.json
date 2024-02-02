@@ -12,6 +12,7 @@
   "dependencies": {
     "@tabler/icons-react": "^2.44.0",
     "@types/styled-components": "^5.1.34",
+    "framer-motion": "^11.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-laag": "^2.0.5",
