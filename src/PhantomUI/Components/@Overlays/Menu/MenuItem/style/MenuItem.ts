@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 // type
-import type { MenuItemProps } from "../style";
+import type { MenuItemProps } from "../../../../../@Types/props";
 
 // settings
 import { Size, DefaultSetting } from "./Settings";

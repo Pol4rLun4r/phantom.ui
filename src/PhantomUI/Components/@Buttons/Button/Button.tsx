@@ -3,12 +3,14 @@ import ButtonStyle from "./style/Button"
 
 // type
 import type { ButtonProps } from "../../../@Types/props"
+import type { PhantomStyledComponentsProps } from "../../../@Types/types"
 
 //components
 import ButtonGroup from "./ButtonGroup"
 
+interface Props extends ButtonProps, PhantomStyledComponentsProps {}
 
-const Button = (props: ButtonProps) => {
+const Button = (props: Props) => {
     return (
         <ButtonStyle {...props}>
             {props.leftSection}
