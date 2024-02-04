@@ -9,8 +9,6 @@ import { Tooltip } from "../../../../PhantomUI/Components/@Overlays";
 // styled
 import Section from "../style/section";
 
-// Icons
-
 const SectionTest = () => {
     return (
         <Section background="secondary">
@@ -18,7 +16,7 @@ const SectionTest = () => {
                 <Title fontWeight="black" fontSize="2.225rem" textTransform="uppercase">Section Test</Title>
                 {/* Test Area  */}
                 <Group width="100%">
-                    <Tooltip label="tooltip" withArrow>
+                    <Tooltip label="tooltip">
                         <Badge variant="dot" radius="lg" size="lg">Loading...</Badge>
                     </Tooltip>
                 </Group>

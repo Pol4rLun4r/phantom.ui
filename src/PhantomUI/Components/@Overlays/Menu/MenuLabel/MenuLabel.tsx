@@ -1,9 +1,14 @@
 import MenuStyle from "./style/MenuLabel"
-import { MenuLabelProps } from "./style/style";
 
-const MenuLabel = ({ children }: MenuLabelProps) => {
+// type
+import type { PhantomProps } from "../../../../@Types/props";
+import type { PhantomStyledComponentsProps } from "../../../../@Types/types";
+
+interface Props extends PhantomProps, PhantomStyledComponentsProps {}
+
+const MenuLabel = (props: Props) => {
     return (
-        <MenuStyle>{children}</MenuStyle>
+        <MenuStyle {...props} >{props.children}</MenuStyle>
     )
 }
 

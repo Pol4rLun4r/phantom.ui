@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 
 // settings menu
 import { useLayer } from "react-laag"
@@ -8,12 +8,12 @@ import MenuLabel from "./MenuLabel/MenuLabel";
 // style
 import { MenuContainer } from "./style/Menu";
 
-interface IMenu {
-    activeMenu: ReactNode
-    children: ReactNode
-}
+import type { MenuProps } from "../../../@Types/props";
+import type { PhantomStyledComponentsProps } from "../../../@Types/types";
 
-const Menu = ({ activeMenu, children }: IMenu) => {
+interface Props extends MenuProps, PhantomStyledComponentsProps { }
+
+const Menu = (props: Props) => {
     const [isOpen, setOpen] = useState(false);
 
     function close() {
@@ -36,14 +36,14 @@ const Menu = ({ activeMenu, children }: IMenu) => {
     return (
         <>
             <div {...triggerProps} onClick={() => handleOpen()}>
-                {activeMenu}
+                {props.activeMenu}
             </div>
 
             {renderLayer(
                 <>
                     {isOpen && (
-                        <MenuContainer {...layerProps}>
-                            {children}
+                        <MenuContainer {...layerProps} {...props}>
+                            {props.children}
                         </MenuContainer>
                     )}
                 </>

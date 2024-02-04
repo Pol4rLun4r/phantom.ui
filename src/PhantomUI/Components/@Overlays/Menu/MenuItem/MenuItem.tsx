@@ -2,23 +2,23 @@
 import MenuStyle from "./style/MenuItem"
 
 // type
-import type { MenuItemProps } from "./style"
+import type { MenuItemProps } from "../../../../@Types/props"
+import type { PhantomStyledComponentsProps } from "../../../../@Types/types"
 
-const MenuItem = ({ children, onClick, leftSection, rightSection }: MenuItemProps) => {
-    const Style = {
-        leftSection, rightSection
-    }
+interface Props extends MenuItemProps, PhantomStyledComponentsProps {}
+
+const MenuItem = (props: Props) => {
 
     return (
-        <MenuStyle {...Style} onClick={() => onClick ? onClick() : ''}>
+        <MenuStyle {...props}>
             <div className="leftSection">
-                {leftSection}
+                {props.leftSection}
             </div>
             <div className="children">
-                {children}
+                {props.children}
             </div>
             <div className="rightSection">
-                {rightSection}
+                {props.rightSection}
             </div>
         </MenuStyle>
     )

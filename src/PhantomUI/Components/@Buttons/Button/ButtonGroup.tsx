@@ -1,10 +1,13 @@
 // style
-import { ButtonGroupStyle } from "./style/Button"
+import { ButtonGroupStyle } from "./style/Button";
 
 // type
-import type { ButtonGroupProps } from "../../../@Types/props"
+import type { PhantomProps } from "../../../@Types/props";
+import type { PhantomStyledComponentsProps } from "../../../@Types/types";
 
-const ButtonGroup = (props: ButtonGroupProps) => {
+interface Props extends PhantomProps, PhantomStyledComponentsProps {}
+
+const ButtonGroup = (props: Props) => {
     return (
         <ButtonGroupStyle {...props}>
             {props.children}

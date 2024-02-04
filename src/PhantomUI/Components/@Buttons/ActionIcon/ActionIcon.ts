@@ -1,15 +1,14 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 // default settings
 import Style from "../../../Style/Style";
-
-// type
 
 // settings
 import Variants from "./style/Variants";
 import Size from "./style/Size";
 
-const ActionIcon = styled.button`
+const ActionIcon = styled(motion.button)`
     ${Style()}
 
     // default 

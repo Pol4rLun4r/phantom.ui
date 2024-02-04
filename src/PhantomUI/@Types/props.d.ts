@@ -1,8 +1,9 @@
 import { ReactNode } from "react";
 import type { PhantomStyleProps } from "./style-props";
-import type { PhantomSize, ActionIconVariant, TextVariant, ButtonVariant, PhantomStyledComponentsProps, BadgeVariant } from "./types";
+import type { PhantomSize, ActionIconVariant, TextVariant, ButtonVariant, BadgeVariant } from "./types";
 
-export interface PhantomProps extends PhantomStyleProps, PhantomStyledComponentsProps {
+export interface PhantomProps extends PhantomStyleProps {
+    children?: ReactNode;
 }
 
 export interface TextProps extends PhantomProps {
@@ -16,8 +17,6 @@ export interface ActionIconProps extends PhantomProps {
 }
 
 export interface ButtonProps extends PhantomProps {
-    children?: ReactNode;
-
     size?: PhantomSize | number | (string & NonNullable<unknown>);
     variant?: ButtonVariant;
     gradient?: { from: string, to: string, deg: number };
@@ -30,10 +29,6 @@ export interface ButtonProps extends PhantomProps {
     disabled?: true;
 }
 
-export interface ButtonGroupProps extends PhantomProps {
-    children?: ReactNode;
-}
-
 export interface LayoutComponentsProps extends PhantomProps {
     grow?: true;
 }
@@ -44,13 +39,10 @@ export interface ImageProps extends PhantomProps {
 }
 
 export interface CardProps extends PhantomProps {
-    children?: ReactNode;
     withBorder?: true;
 }
 
 export interface BadgeProps extends PhantomProps {
-    children?: ReactNode;
-
     size?: PhantomSize;
     variant?: BadgeVariant;
     gradient?: { from: string, to: string, deg: number };
@@ -62,8 +54,15 @@ export interface BadgeProps extends PhantomProps {
 }
 
 export interface TooltipProps extends PhantomProps {
-    children?: ReactNode;
-
     label: string | number;
     withArrow?: true;
+}
+
+export interface MenuItemProps extends PhantomProps {
+    leftSection?: ReactNode
+    rightSection?: ReactNode
+}
+
+export interface MenuProps extends PhantomProps {
+    activeMenu: ReactNode;
 }

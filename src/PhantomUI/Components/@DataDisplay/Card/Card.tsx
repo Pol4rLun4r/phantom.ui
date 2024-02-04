@@ -3,11 +3,14 @@ import CardStyle from "./style/Card"
 
 // type
 import type { CardProps } from "../../../@Types/props"
+import type { PhantomStyledComponentsProps } from "../../../@Types/types"
 
 // component
 import CardSection from "./CardSection"
 
-const Card = (props: CardProps) => {
+interface Props extends CardProps, PhantomStyledComponentsProps {}
+
+const Card = (props: Props) => {
     return (
         <CardStyle {...props}>
             {props.children}
