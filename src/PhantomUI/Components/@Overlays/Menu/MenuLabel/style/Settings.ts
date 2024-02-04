@@ -21,7 +21,6 @@ export const DefaultSetting = () => {
     return css`
     appearance: none;
     border-style: none;
-    cursor: pointer;
 
     display: flex;
     flex-direction: row;

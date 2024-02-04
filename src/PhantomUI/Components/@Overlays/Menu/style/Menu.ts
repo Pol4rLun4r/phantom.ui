@@ -19,4 +19,6 @@ export const MenuContainer = styled.div`
     border-radius: ${$Radius.sm};
 
     padding: 0.25rem;
+
+    z-index: 20;
 `

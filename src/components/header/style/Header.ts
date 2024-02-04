@@ -19,7 +19,7 @@ const HeaderStyle = styled.header`
     height: 3.75rem;
 
     position: fixed;
-    z-index: 100;
+    z-index: 10;
 
     background-color: ${bodyColorPrimary};
 
