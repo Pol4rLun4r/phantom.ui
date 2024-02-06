@@ -14,11 +14,11 @@ const SwitchColors = () => {
 
     return (
         <>
-            {Object.keys(ColorSchema).map((schema) => {
+            {Object.keys(ColorSchema).map((schema, index) => {
                 return (
                     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                     // @ts-expect-error
-                    <Menu.item key={schema} onClick={() => setColorSchema(schema)}
+                    <Menu.item key={schema} index={index} onClick={() => setColorSchema(schema)}
                         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                         // @ts-expect-error
                         leftSection={<ActionIcon as="div" size="sm" radius="lg" variant="custom" backgroundColor={ColorSchema[schema][5]} />}

@@ -61,6 +61,7 @@ export interface TooltipProps extends PhantomProps {
 export interface MenuItemProps extends PhantomProps {
     leftSection?: ReactNode
     rightSection?: ReactNode
+    index?: number;
 }
 
 export interface MenuProps extends PhantomProps {

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 // settings menu
 import { useLayer } from "react-laag"
@@ -13,7 +13,7 @@ import type { MenuProps } from "../../../@Types/props";
 import type { PhantomStyledComponentsProps } from "../../../@Types/types";
 
 // motion
-import { AnimatePresence, motion, Variants, useAnimate, stagger } from "framer-motion";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 
 const menuContainerVariants: Variants = {
     open: {
@@ -23,8 +23,6 @@ const menuContainerVariants: Variants = {
             type: "spring",
             bounce: 0,
             duration: 0.4,
-            delayChildren: 0.3,
-            staggerChildren: 0.05
         }
     },
     closed: {
@@ -40,14 +38,8 @@ const menuContainerVariants: Variants = {
 
 interface Props extends MenuProps, PhantomStyledComponentsProps { }
 
-const Menu = (props: Props) => {
+const Menu = (props: Omit<Props, "ref">) => {
     const [isOpen, setOpen] = useState(false);
-
-    const [scope, animate] = useAnimate()
-
-    if(scope.current && isOpen) {
-        animate("li", { opacity: 1, y: 0, }, { delay: stagger(0.2) })
-    }
 
     const { renderLayer, triggerProps, layerProps } = useLayer({
         isOpen,
@@ -74,7 +66,6 @@ const Menu = (props: Props) => {
                             initial="closed"
                             animate="open"
                             exit="closed"
-                            ref={scope}
                         >
                             {props.children}
                         </MenuContainer>

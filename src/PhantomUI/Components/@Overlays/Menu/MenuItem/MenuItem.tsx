@@ -13,12 +13,15 @@ interface Props extends MenuItemProps, PhantomStyledComponentsProps { }
 const itemVariants: Variants = {
     initial: {
         opacity: 0,
-        y: 100,
+        y: 30,
     },
-    animate: {
+    animate: (index: number) => ({
         opacity: 1,
         y: 0,
-    }
+        transition: {
+            delay: 0.10 * index,
+        }
+    })
 }
 
 const MenuItem = (props: Props) => {
@@ -27,7 +30,8 @@ const MenuItem = (props: Props) => {
         <MenuStyle
             variants={itemVariants}
             initial="initial"
-            // animate="animate"
+            animate="animate"
+            custom={props.index}
             {...props}
         >
             <div className="leftSection">
