@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { motion } from "framer-motion";
+
 // style
 import Style from "../../../../Style/Style";
 
@@ -12,7 +14,7 @@ import Variants from "./Variants";
 // size
 import { BorderRadiusGroup } from "../../../../Style/size/RadiusGroup.style";
 
-const ButtonStyle = styled.button`
+const ButtonStyle = styled(motion.button).attrs({whileTap: {scale: 0.95}})`
     ${Style()}
     
     // default

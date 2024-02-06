@@ -5,12 +5,31 @@ import MenuStyle from "./style/MenuItem"
 import type { MenuItemProps } from "../../../../@Types/props"
 import type { PhantomStyledComponentsProps } from "../../../../@Types/types"
 
-interface Props extends MenuItemProps, PhantomStyledComponentsProps {}
+// motion
+import { Variants } from "framer-motion"
+
+interface Props extends MenuItemProps, PhantomStyledComponentsProps { }
+
+const itemVariants: Variants = {
+    initial: {
+        opacity: 0,
+        y: 100,
+    },
+    animate: {
+        opacity: 1,
+        y: 0,
+    }
+}
 
 const MenuItem = (props: Props) => {
 
     return (
-        <MenuStyle {...props}>
+        <MenuStyle
+            variants={itemVariants}
+            initial="initial"
+            // animate="animate"
+            {...props}
+        >
             <div className="leftSection">
                 {props.leftSection}
             </div>

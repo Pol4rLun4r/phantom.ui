@@ -16,6 +16,9 @@ const LeftAndRight = '0.8rem';
 const TooltipStyle = styled(motion.div)`
     ${Style()}
 
+    //default
+    z-index: 20;
+
     // settings
     color: ${textTooltip};
     background-color: ${bodyTooltip};

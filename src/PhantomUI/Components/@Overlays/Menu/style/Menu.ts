@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
+import { motion } from "framer-motion";
+
 // colors
 import { borderMenu, bodyMenu } from "../../../../Theme/Theme";
 import { $Radius } from "../../../../@Sizes/Radius";
 // import Style from "../../../../Style/Style";
 
-export const MenuContainer = styled.div`
+export const MenuContainer = styled(motion.ul)`
 
     // default
     display: flex;

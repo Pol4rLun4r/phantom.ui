@@ -8,7 +8,7 @@ import Style from "../../../Style/Style";
 import Variants from "./style/Variants";
 import Size from "./style/Size";
 
-const ActionIcon = styled(motion.button)`
+const ActionIcon = styled(motion.button).attrs({whileTap: {scale: 0.95}})`
     ${Style()}
 
     // default 
