@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 // sizes
 import { $Radius } from "../../../../../PhantomUI/@Sizes/Radius";
@@ -9,7 +10,7 @@ interface IBox {
     background: string;
 }
 
-export const ColorBox = styled.div`
+export const ColorBox = styled(motion.div)`
     width: 100%;
     height: 100%;
 
@@ -45,7 +46,7 @@ export const ColorContainer = styled.div`
     }
 `
 
-export const ColorInfo = styled.div`
+export const ColorInfo = styled(motion.div)`
     display: flex;
     flex-direction: column;
     align-items: center;

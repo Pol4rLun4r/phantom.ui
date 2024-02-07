@@ -16,7 +16,7 @@ const Home = () => {
       <Main>
         <Introduction />
         <ColorPalette/>
-        <SectionTest/>
+        {/* <SectionTest/> */}
       </Main>
     </>
   )
