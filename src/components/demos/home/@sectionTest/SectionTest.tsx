@@ -3,8 +3,8 @@ import { Group, Stack } from "../../../../PhantomUI/Components/@Layout";
 import { Title } from "../../../../PhantomUI/Components/@Typography";
 
 // @TestUI 
-import { Badge } from "../../../../PhantomUI/Components/@DataDisplay";
-import { Tooltip } from "../../../../PhantomUI/Components/@Overlays";
+import { ColorSwatch } from "../../../../PhantomUI/Components/@DataDisplay";
+import { IconColorSwatch } from "@tabler/icons-react";
 
 // styled
 import Section from "../style/section";
@@ -16,9 +16,9 @@ const SectionTest = () => {
                 <Title fontWeight="black" fontSize="2.225rem" textTransform="uppercase">Section Test</Title>
                 {/* Test Area  */}
                 <Group width="100%">
-                    <Tooltip label="tooltip">
-                        <Badge variant="dot" radius="lg" size="lg">Loading...</Badge>
-                    </Tooltip>
+                    <ColorSwatch size="lg" radius='md' swatch="rgba(240, 24, 0, 0.2)" circle>
+                        {/* <IconColorSwatch/> */}
+                    </ColorSwatch>
                 </Group>
             </Stack>
         </Section>

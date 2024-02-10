@@ -7,7 +7,7 @@ import Introduction from "../components/demos/home/introduction/Introduction";
 import ColorPalette from "../components/demos/home/colorPalette/ColorPalette";
 
 //@test
-// import SectionTest from "../components/demos/home/@sectionTest/SectionTest";
+import SectionTest from "../components/demos/home/@sectionTest/SectionTest";
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
       <Main>
         <Introduction />
         <ColorPalette/>
-        {/* <SectionTest/> */}
+        <SectionTest/>
       </Main>
     </>
   )

@@ -67,3 +67,9 @@ export interface MenuItemProps extends PhantomProps {
 export interface MenuProps extends PhantomProps {
     activeMenu: ReactNode;
 }
+
+export interface ColorSwatchProps extends PhantomProps {
+    size?: PhantomSize | (string & NonNullable<unknown>);
+    swatch?: React.CSSProperties['color'];
+    circle?: true;
+}
