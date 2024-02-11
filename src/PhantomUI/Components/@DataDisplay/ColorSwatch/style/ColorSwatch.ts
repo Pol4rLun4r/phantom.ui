@@ -15,6 +15,9 @@ const ColorSwatchStyle = styled(motion.span) <ColorSwatchProps>`
     ${Size()}
 
     // default
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     z-index: 3;
 

@@ -9,9 +9,9 @@ interface Props extends ColorSwatchProps, PhantomStyledComponentsProps { }
 
 const ColorSwatch = (props: Props) => {
     return (
-        <Container>
-            <Background {...props}/>
-            <BackgroundAlpha {...props}/>
+        <Container {...props}>
+            <Background size={props.size} circle={props.circle}></Background>
+            <BackgroundAlpha size={props.size} circle={props.circle}></BackgroundAlpha>
             <ColorSwatchStyle {...props}>
                 {props.children}
             </ColorSwatchStyle>

@@ -17,7 +17,7 @@ const SectionTest = () => {
                 {/* Test Area  */}
                 <Group width="100%">
                     <ColorSwatch size="lg" radius='md' swatch="rgba(240, 24, 0, 0.2)" circle>
-                        {/* <IconColorSwatch/> */}
+                        <IconColorSwatch/>
                     </ColorSwatch>
                 </Group>
             </Stack>
