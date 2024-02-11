@@ -22,7 +22,7 @@ const SectionTest = () => {
                 </Group>
             </Stack>
         </Section>
-    )
+    ) a
 }
 
 export default SectionTest;
