@@ -20,6 +20,8 @@ const ColorSwatchStyle = styled(motion.span) <ColorSwatchProps>`
     align-items: center;
     position: absolute;
     z-index: 3;
+    
+    border-style: none;
 
     // settings
     ${({ swatch }) => swatch ? `background-color: ${swatch};` : 'background-color: gray;'}

@@ -1,6 +1,6 @@
 // UI
-import { ActionIcon } from "../../../PhantomUI/Components/@Buttons"
 import { Menu } from "../../../PhantomUI/Components/@Overlays"
+import { ColorSwatch } from "../../../PhantomUI/Components/@DataDisplay"
 
 // colors
 import ColorSchema from "../../../PhantomUI/Theme/Colors"
@@ -21,7 +21,7 @@ const SwitchColors = () => {
                     <Menu.item key={schema} index={index} onClick={() => setColorSchema(schema)}
                         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                         // @ts-expect-error
-                        leftSection={<ActionIcon as="div" size="sm" radius="lg" variant="custom" backgroundColor={ColorSchema[schema][5]} />}
+                        leftSection={<ColorSwatch size="sm" circle swatch={ColorSchema[schema][5]} />}
                     >
                         {schema}
                     </Menu.item >
