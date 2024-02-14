@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // palette colors
-import ColorSchema from "../Theme/Colors"
+import ColorSchema from "../Theme/ColorPalette"
 
 import { colorSchema, mode } from "../styled"
 
@@ -11,14 +11,14 @@ type Props = {
     }
 }
 
-type Values = {
+export type ThemeValues = {
     dark: number,
     light: number
 }
 
 interface IThemeValue {
     props: Props,
-    values: Values
+    values: ThemeValues
     alpha?: string
 }
 
@@ -42,7 +42,7 @@ const getThemeValue = ({ props, values, alpha }: IThemeValue) => {
     return hexToRGB(color, alpha);
 }
 
-const themeColorSchema = (values: Values, alpha?: string) => {
+const themeColorSchema = (values: ThemeValues, alpha?: string) => {
     return function (props: any) {
         return getThemeValue({ props, values, alpha });
     };

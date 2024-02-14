@@ -3,7 +3,7 @@ import { Menu } from "../../../PhantomUI/Components/@Overlays"
 import { ColorSwatch } from "../../../PhantomUI/Components/@DataDisplay"
 
 // colors
-import ColorSchema from "../../../PhantomUI/Theme/Colors"
+import ColorSchema from "../../../PhantomUI/Theme/ColorPalette"
 
 // recoil state manage
 import { useSetRecoilState } from "recoil"

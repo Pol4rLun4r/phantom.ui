@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import type { PhantomStyleProps } from "./style-props";
-import type { PhantomSize, ActionIconVariant, TextVariant, ButtonVariant, BadgeVariant } from "./types";
+import type { PhantomSize, ActionIconVariant, TextVariant, ButtonVariant, BadgeVariant, InputVariant } from "./types";
 
 export interface PhantomProps extends PhantomStyleProps {
     children?: ReactNode;
@@ -72,4 +72,19 @@ export interface ColorSwatchProps extends PhantomProps {
     size?: PhantomSize | (string & NonNullable<unknown>);
     swatch?: React.CSSProperties['color'];
     circle?: true;
+}
+
+export interface InputsProps extends PhantomProps {
+    size?: PhantomSize;
+
+    label?: string;
+    description?: string;
+    placeholder?: string;
+    error?: string;
+
+    leftSection?: ReactNode;
+    rightSection?: ReactNode;
+
+    variant?: InputVariant;
+    disabled?: true;
 }
