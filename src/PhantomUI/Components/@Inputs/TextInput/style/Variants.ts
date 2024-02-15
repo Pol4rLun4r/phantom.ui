@@ -1,63 +1,81 @@
 import { css } from "styled-components";
 
+// type
 import type { InputsProps } from "../../../../@Types/props";
+
+// component
+import { Input } from "./TextInput";
 
 // colors
 import themeColorSchema from "../../../../hook/ThemeHook";
-import { inputValueColor, inputBackgroundDefault, inputBackgroundFilled, inputBorder, inputBackgroundDisabled, inputColorDisabled, inputFocusBorder, inputBorderDisabled } from "../../../../Theme/Themes/Inputs";
+import { inputValueColor, inputBackgroundDefault, inputBackgroundFilled, inputBorder, inputBackgroundDisabled, inputColorDisabled, inputFocusBorder, inputBorderDisabled, inputColorError } from "../../../../Theme/Themes/Inputs";
 
-const DefaultVariant = () => {
+const DefaultVariant = (error: boolean | undefined) => {
     return css`
-    border: solid 1px;
-    color: ${inputValueColor};
-    background-color: ${inputBackgroundDefault};
-    border-color: ${inputBorder};
+    ${Input} {
+        border: solid 1px;
+        color: ${error ? inputColorError : inputValueColor};
+        background-color: ${inputBackgroundDefault};
+        border-color: ${error ? inputColorError : inputBorder};
 
-    &:focus {
-        border: 1px solid ${themeColorSchema(inputFocusBorder)};
-        outline: none;
-        transition: border 100ms;
+        &:focus {
+            border: 1px solid ${error ? inputColorError : themeColorSchema(inputFocusBorder)};
+            outline: none;
+            transition: border 100ms;
+        }
+
+        &::placeholder{
+            color: ${error ? inputColorError : ''};
+        }
     }
     `;
 };
 
-const FilledVariant = () => {
+const FilledVariant = (error: boolean | undefined) => {
     return css`
-    border: solid 1px;
-    color: ${inputValueColor};
-    background-color: ${inputBackgroundFilled};
-    border-color: ${inputBackgroundFilled};
+    ${Input}{
+        border: solid 1px;
+        color: ${error ? inputColorError : inputValueColor};
+        background-color: ${inputBackgroundFilled};
+        border-color: ${inputBackgroundFilled};
+    
+        &:focus {
+            border: 1px solid ${error ? inputColorError : themeColorSchema(inputFocusBorder)};
+            outline: none;
+            transition: border 100ms;
+        }
 
-    &:focus {
-        border: 1px solid ${themeColorSchema(inputFocusBorder)};
-        outline: none;
-        transition: border 100ms;
+        &::placeholder{
+            color: ${error ? inputColorError : ''};
+        }
     }
     `;
 };
 
 const inputDisabled = () => {
     return css`
-    border: solid 1px;
-    background-color: ${inputBackgroundDisabled};
-    color: ${inputColorDisabled};
-    border-color: ${inputBorderDisabled};
-    opacity: .6;
-    cursor: not-allowed;  
-
-    &::placeholder{
+    ${Input}{
+        border: solid 1px;
+        background-color: ${inputBackgroundDisabled};
         color: ${inputColorDisabled};
+        border-color: ${inputBorderDisabled};
+        opacity: .6;
+        cursor: not-allowed;  
+    
+        &::placeholder{
+            color: ${inputColorDisabled};
+        }
     }
-
     `;
 };
 
+
 const Variants = () => {
     return css`
-    ${({ variant, disabled }: InputsProps) =>
+    ${({ variant, disabled, error }: InputsProps) =>
             disabled ? inputDisabled() :
-                variant === 'default' ? DefaultVariant() :
-                    variant === 'filled' ? FilledVariant() : DefaultVariant()};
+                    variant === 'default' ? DefaultVariant(error) :
+                        variant === 'filled' ? FilledVariant(error) : DefaultVariant(error)};
 `;
 }
 

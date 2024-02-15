@@ -23,10 +23,10 @@ const SectionTest = () => {
                 {/* Test Area  */}
                 <Group width="100%">
                     <TextInput
-                        label="Text input"
-                        description="only description"
-                        placeholder="input placeholder"
+                        label="Your e-mail"
+                        placeholder="write your email here"
                         leftSection={icon}
+                        withAsterisk
                     />
                 </Group>
             </Stack>

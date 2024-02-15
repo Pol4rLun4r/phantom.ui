@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { BaseHTMLAttributes } from "react";
+import { HTMLMotionProps } from "framer-motion";
 
 export type PhantomSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
@@ -18,3 +19,7 @@ export type InputVariant = 'default' | 'filled'
 export interface PhantomStyledComponentsProps extends Omit<BaseHTMLAttributes<T>, "color">  {
     as?: any | (string & NonNullable<unknown>);
 }
+
+export interface PhantomHTMLInputElement extends Omit<HTMLMotionProps<"input">, "width" | "children" | "color" | "disabled" | "size" | "height"> {
+    as?: any | (string & NonNullable<unknown>);
+} 

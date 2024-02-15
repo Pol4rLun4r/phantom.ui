@@ -54,3 +54,8 @@ export const inputIconColorDisabled = theme('mode', {
     light: '#828282',
     dark: '#828282'
 });
+
+export const inputColorError = theme('mode', {
+    light: '#e03131',
+    dark: '#fa5252'
+})

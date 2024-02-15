@@ -79,12 +79,13 @@ export interface InputsProps extends PhantomProps {
 
     label?: string;
     description?: string;
-    placeholder?: string;
-    error?: string;
+    error?: boolean;
+    withAsterisk?: true; 
 
     leftSection?: ReactNode;
     rightSection?: ReactNode;
 
     variant?: InputVariant;
     disabled?: true;
+    
 }
