@@ -14,7 +14,7 @@ const TextInput = ({value, onChange, placeholder, radius, accept, alt, autoCompl
 
     return (
         <Container {...props}>
-            <Label>
+            <Label htmlFor={name}>
                 {props.label}
                 {props.withAsterisk && (
                     <Asterisk> *</Asterisk>
@@ -29,7 +29,7 @@ const TextInput = ({value, onChange, placeholder, radius, accept, alt, autoCompl
                         {props.leftSection}
                     </LeftSection>
                 )}
-                <Input {...InputProps}/>
+                <Input {...InputProps} id={name}/>
                 {props.rightSection && (
                     <RightSection>
                         {props.rightSection}

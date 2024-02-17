@@ -22,4 +22,8 @@ export interface PhantomStyledComponentsProps extends Omit<BaseHTMLAttributes<T>
 
 export interface PhantomHTMLInputElement extends Omit<HTMLMotionProps<"input">, "width" | "children" | "color" | "disabled" | "size" | "height"> {
     as?: any | (string & NonNullable<unknown>);
-} 
+}
+
+export interface PhantomHTMLButtonElement extends Omit<BaseHTMLAttributes<T>, "color">, Omit<HTMLMotionProps<"button">, "children" | "disabled" | "accessKey" | "className" | "contentEditable" | "draggable" | "dir" | "hidden" | "id" | "color" >{
+    as?: any | (string & NonNullable<unknown>);
+}

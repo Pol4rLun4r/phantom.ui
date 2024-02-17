@@ -6,15 +6,12 @@ import { Title } from "../../../../PhantomUI/Components/@Typography";
 import Section from "../style/section";
 
 // @TestUI
-import { TextInput } from "../../../../PhantomUI/Components/@Inputs";
-import { IconAt } from "@tabler/icons-react";
+import FormTest from "./FormTest";
 
 // components
 // import WaveSplitter from "../waveSplitter/WaveSplitter";
 
 const SectionTest = () => {
-    const icon = <IconAt style={{ width: '1rem', height: '1rem' }} />
-
     return (
         <Section background="secondary">
             {/* <WaveSplitter color="secondary" /> */}
@@ -22,13 +19,7 @@ const SectionTest = () => {
                 <Title fontWeight="black" fontSize="2.225rem" textTransform="uppercase">Section Test</Title>
                 {/* Test Area  */}
                 <Group width="100%">
-                    <TextInput
-                        label="Your e-mail"
-                        description="none"
-                        placeholder="write your email here"
-                        leftSection={icon}
-                        withAsterisk
-                    />
+                    <FormTest/>
                 </Group>
             </Stack>
             {/* <WaveSplitter topOrBottom="bottom" color="secondary" /> */}
