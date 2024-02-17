@@ -24,6 +24,7 @@ const SectionTest = () => {
                 <Group width="100%">
                     <TextInput
                         label="Your e-mail"
+                        description="none"
                         placeholder="write your email here"
                         leftSection={icon}
                         withAsterisk

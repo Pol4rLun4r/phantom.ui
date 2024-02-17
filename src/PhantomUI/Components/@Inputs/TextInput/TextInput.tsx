@@ -7,27 +7,31 @@ import type { InputsProps } from "../../../@Types/props";
 
 interface Props extends InputsProps, PhantomHTMLInputElement { }
 
-const TextInput = (props: Props) => {
+const TextInput = ({value, onChange, placeholder, radius, accept, alt, autoComplete, capture, checked, defaultChecked, defaultValue, dir, form, formAction, formEncType, formMethod, formNoValidate, formTarget, max, min, maxLength, minLength, multiple, name, pattern, readOnly, required, step, ...props}: Props) => {
+    const InputProps = {
+        value, onChange, placeholder, radius, accept, alt, autoComplete, capture, checked, defaultChecked, defaultValue, dir, form, formAction, formEncType, formMethod, formNoValidate, formTarget, max, min, maxLength, minLength, multiple, name, pattern, readOnly, required, step
+    }
+
     return (
-        <Container variant={props.variant} disabled={props.disabled} error={props.error} >
-            <Label size={props.size}>
+        <Container {...props}>
+            <Label>
                 {props.label}
                 {props.withAsterisk && (
                     <Asterisk> *</Asterisk>
                 )}
             </Label>
-            <Description size={props.size}>
+            <Description>
                 {props.description}
             </Description>
-            <InputWrapper description={props.description}>
+            <InputWrapper>
                 {props.leftSection && (
-                    <LeftSection size={props.size} disabled={props.disabled} error={props.error}>
+                    <LeftSection>
                         {props.leftSection}
                     </LeftSection>
                 )}
-                <Input {...props}/>
+                <Input {...InputProps}/>
                 {props.rightSection && (
-                    <RightSection size={props.size} disabled={props.disabled} error={props.error}>
+                    <RightSection>
                         {props.rightSection}
                     </RightSection>
                 )}

@@ -17,29 +17,15 @@ import type { InputsProps } from "../../../../@Types/props";
 export const InputWrapper = styled(motion.div) <InputsProps>`
     //default
     position: relative;
-
-    //settings
-    ${({ description }) => description ? 'margin-top: 5px;' : 'margin-top: 3px;'}
 `;
 
 export const Input = styled(motion.input).attrs({ type: "text" })`
     ${Style()}
-
-    // settings
-    ${Size()}
-`;
-
-export const Container = styled(motion.div)<InputsProps>`
-    //settings
-    ${Variants()}
 `;
 
 export const Label = styled(motion.label)`
     // default
     font-weight: 500;
-
-    // settings
-    ${LabelSize()}
 `;
 
 export const Asterisk = styled(motion.span)`
@@ -47,9 +33,6 @@ export const Asterisk = styled(motion.span)`
 `;
 
 export const Description = styled(motion.p)`
-    // settings
-    ${DescriptionSize()}
-
     //default 
     color: ${inputDescriptionColor};
 `;
@@ -75,16 +58,52 @@ const Section = (error: boolean | undefined) => {
 
 export const RightSection = styled(motion.div) <InputsProps>`
     // default
-    ${({ error }) => Section(error)}
-    ${({ disabled }) => disabled ? 'opacity: .6;' : ''}
     right: 0;
     z-index: 2;
 `;
 
 export const LeftSection = styled(motion.div) <InputsProps>`
     // default
-    ${({ error }) => Section(error)}
-    ${({ disabled }) => disabled ? 'opacity: .6;' : ''}
     left: 0;
     z-index: 2;
+`;
+
+export const Container = styled(motion.div) <InputsProps>`
+    //default
+    ${Style()}
+
+    //settings
+    ${Variants()}
+
+    ${Label}{
+        // settings
+        ${LabelSize()}
+    }
+
+    ${Description}{
+        // settings
+        ${DescriptionSize()}
+    }
+
+    ${InputWrapper}{
+        //settings
+        ${({ description }) => description ? 'margin-top: 5px;' : 'margin-top: 3px;'}
+    }
+
+    ${Input}{
+        // settings
+        ${Size()}
+    }
+
+    ${LeftSection} {
+        //settings
+        ${({ error }) => Section(error)}
+        ${({ disabled }) => disabled ? 'opacity: .6;' : ''}
+    }
+
+    ${RightSection} {
+        //settings
+        ${({ error }) => Section(error)}
+        ${({ disabled }) => disabled ? 'opacity: .6;' : ''}
+    }
 `;
