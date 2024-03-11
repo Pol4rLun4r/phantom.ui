@@ -7,13 +7,13 @@ import type { InputsProps } from "../../../@Types/props";
 
 interface Props extends InputsProps, PhantomHTMLInputElement { }
 
-const TextInput = ({value, onChange, placeholder, radius, accept, alt, autoComplete, capture, checked, defaultChecked, defaultValue, dir, form, formAction, formEncType, formMethod, formNoValidate, formTarget, max, min, maxLength, minLength, multiple, name, pattern, readOnly, required, step, ...props}: Props) => {
+const TextInput = ({value, onChange, placeholder, radius, accept, alt, autoComplete, capture, checked, defaultChecked, defaultValue, dir, form, formAction, formEncType, formMethod, formNoValidate, formTarget, max, min, maxLength, minLength, multiple, name, pattern, readOnly, required, step, disabled,...props}: Props) => {
     const InputProps = {
-        value, onChange, placeholder, radius, accept, alt, autoComplete, capture, checked, defaultChecked, defaultValue, dir, form, formAction, formEncType, formMethod, formNoValidate, formTarget, max, min, maxLength, minLength, multiple, name, pattern, readOnly, required, step
+        value, onChange, placeholder, radius, accept, alt, autoComplete, capture, checked, defaultChecked, defaultValue, dir, form, formAction, formEncType, formMethod, formNoValidate, formTarget, max, min, maxLength, minLength, multiple, name, pattern, readOnly, required, step, disabled
     }
 
     return (
-        <Container {...props}>
+        <Container {...props} disabled={disabled}>
             <Label htmlFor={name}>
                 {props.label}
                 {props.withAsterisk && (
