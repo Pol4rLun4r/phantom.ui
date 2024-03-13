@@ -2,23 +2,17 @@
 import Main from "../components/demos/home/style/Main";
 
 // components
-import Header from "../components/header/Header";
 import Introduction from "../components/demos/home/introduction/Introduction";
 import ColorPalette from "../components/demos/home/colorPalette/ColorPalette";
-
-//@test
-import SectionTest from "../components/demos/home/@sectionTest/SectionTest";
+// import DarkColorScheme from "../components/demos/home/darkColorScheme/DarkColorScheme";
 
 const Home = () => {
   return (
-    <>
-      <Header />
       <Main>
         <Introduction />
         <ColorPalette/>
-        <SectionTest/>
+        {/* <DarkColorScheme/> */}
       </Main>
-    </>
   )
 }
 

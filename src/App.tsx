@@ -1,24 +1,33 @@
-// style
-import { ThemeProvider } from "styled-components";
-import GlobalStyle from "./PhantomUI/Style/Global.style";
+// config router
+import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from "react-router-dom"
 
 // pages
-import Home from "./pages/Home";
+import ErrorPage from "./pages/ErrorPage"
+import Root from "./pages/@Root"
+import Home from "./pages/Home"
 
-// recoil StateManage
-import { useRecoilValue } from 'recoil'
-import { themeMode, colorSchemaMode } from './hooks/recoil';
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route
+      path="/"
+      element={<Root />}
+    >
+      <Route
+        index={true}
+        element={<Home />}
+      />
+      <Route
+        path="/*"
+        element={<ErrorPage />}
+      />
+    </Route>
+  )
+)
 
-function App() {
-  const mode = useRecoilValue(themeMode);
-  const colorSchema = useRecoilValue(colorSchemaMode);
-
+const App = () => {
   return (
-    <ThemeProvider theme={{ mode: mode, colorSchema: colorSchema }}>
-      <GlobalStyle />
-      <Home />
-    </ThemeProvider>
+    <RouterProvider router={router} />
   )
 }
 
-export default App;
+export default App
