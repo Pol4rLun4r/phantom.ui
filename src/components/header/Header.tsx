@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <HeaderStyle>
             <Group height="100%" justify="space-between" align="center">
-                <Group gap="xs">
+                <Group gap="xs" as={"a"} href="/">
                     <ActionIcon size="lg" radius="lg" variant="filled">
                         <IconGhost3 stroke={2} />
                     </ActionIcon>
