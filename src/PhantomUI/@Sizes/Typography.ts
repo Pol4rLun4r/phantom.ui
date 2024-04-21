@@ -15,3 +15,13 @@ export const $BadgeFontSize = {
     lg: '0.8125rem',
     xl: '1rem'
 }
+
+// peso das fonts
+export const $FontWeight = {
+    black: 900,
+    bold: 700,
+    semiBold: 600,
+    regular: 400,
+    light: 300,
+    semiLight: 350
+}

@@ -36,6 +36,11 @@ export const borderColor = theme('mode', {
     dark: '#2e2e2e',
 })
 
+export const borderColorSecondary = theme('mode', {
+    light: '#e9ecef',
+    dark: '#1f1f1f'
+})
+
 // buttons
 export const buttonBackground = theme('mode', {
     light: '#ffffff',
