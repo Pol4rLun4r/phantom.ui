@@ -5,7 +5,7 @@ import type { PhantomStyleProps } from "../../@Types/style-props";
 
 
 // size
-import { $FontSize } from "../../@Sizes/Typography";
+import { $FontSize, $FontWeight } from "../../@Sizes/Typography";
 
 export const FontSize = () => {
     return css`
@@ -20,12 +20,12 @@ export const FontSize = () => {
 
 export const FontWeight = () => {
     return css`
-        font-weight: ${({ fontWeight }: PhantomStyleProps) => fontWeight === "black" ? 900 :
-            fontWeight === "bold" ? 700 :
-                fontWeight === "semiBold" ? 600 :
-                    fontWeight === "regular" ? 400 :
-                        fontWeight === "semiLight" ? 350 :
-                            fontWeight === "light" ? 300 :
-                                fontWeight ? fontWeight : 400};
+        font-weight: ${({ fontWeight }: PhantomStyleProps) => fontWeight === "black" ? $FontWeight.black :
+            fontWeight === "bold" ? $FontWeight.bold :
+                fontWeight === "semiBold" ? $FontWeight.semiBold :
+                    fontWeight === "regular" ? $FontWeight.regular :
+                        fontWeight === "semiLight" ? $FontWeight.semiLight :
+                            fontWeight === "light" ? $FontWeight.light :
+                                fontWeight ? fontWeight : $FontWeight.regular};
     `;
 };

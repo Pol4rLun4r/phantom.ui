@@ -13,7 +13,7 @@ type Props = {
 
 export type ThemeValues = {
     dark: number,
-    light: number
+    light: number,
 }
 
 interface IThemeValue {
