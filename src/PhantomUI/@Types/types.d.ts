@@ -16,6 +16,8 @@ export type BadgeVariant = ActionIconVariant | 'dot';
 
 export type InputVariant = 'default' | 'filled'
 
+export type NavLinkVariant = 'default' | 'subtle' | 'light' | 'filled';
+
 export interface PhantomStyledComponentsProps extends Omit<BaseHTMLAttributes<T>, "color">  {
     as?: any | (string & NonNullable<unknown>);
 }

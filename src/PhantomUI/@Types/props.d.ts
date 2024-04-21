@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import type { PhantomStyleProps } from "./style-props";
-import type { PhantomSize, ActionIconVariant, TextVariant, ButtonVariant, BadgeVariant, InputVariant } from "./types";
+import type { PhantomSize, ActionIconVariant, TextVariant, ButtonVariant, BadgeVariant, InputVariant, NavLinkVariant } from "./types";
 
 export interface PhantomProps extends PhantomStyleProps {
     children?: ReactNode;
@@ -19,6 +19,7 @@ export interface ActionIconProps extends PhantomProps {
 export interface ButtonProps extends PhantomProps {
     size?: PhantomSize | number | (string & NonNullable<unknown>);
     variant?: ButtonVariant;
+    disabledHoverEffect?: true;
     gradient?: { from: string, to: string, deg: number };
 
     leftSection?: ReactNode;
@@ -80,12 +81,32 @@ export interface InputsProps extends PhantomProps {
     label?: string;
     description?: string;
     error?: boolean;
-    withAsterisk?: true; 
+    withAsterisk?: true;
 
     leftSection?: ReactNode;
     rightSection?: ReactNode;
 
     variant?: InputVariant;
     disabled?: true;
-    
+
+}
+
+export interface NavLinkProps extends PhantomProps {
+    label: string | undefined;
+    variant?: NavLinkVariant;
+    disabled?: true; 
+
+    opened?: boolean;
+
+    active?: boolean;
+    nested?: boolean;
+
+    to?: string; 
+}
+
+export interface NavLinkGroupProps extends PhantomProps {
+    label?: string | undefined;
+    disabled?: true;
+
+    leftSection?: ReactNode;
 }

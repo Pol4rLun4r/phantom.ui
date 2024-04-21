@@ -34,7 +34,7 @@ const Introduction = () => {
 
     const groupProp: { grow: true } | object = !isTablet ? { grow: true } : {};
 
-    const buttonProps: PhantomProps = { paddingLeft: '4rem', paddingRight: '3rem' };
+    const buttonProps: PhantomProps = { paddingLeft: '3rem', paddingRight: '3rem' };
 
     return (
         <IntroductionSection>
@@ -49,8 +49,8 @@ const Introduction = () => {
                 </Text>
                 <Features />
                 <Group width="100%" justify="flex-start" {...groupProp}>
-                    <Button size="xl" variant="gradient" fontWeight={700} radius="md" {...buttonProps}>
-                        Coming Soon
+                    <Button as={"a"} href="/docs/getting-started" size="xl" variant="gradient" fontWeight={700} radius="md" {...buttonProps}>
+                        Get Started
                     </Button>
                     <Button size="xl" variant="custom" backgroundColor="black" color="white" fontWeight={700} radius="md" {...buttonProps}
                         leftSection={<IconBrandGithub />}
