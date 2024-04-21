@@ -23,7 +23,7 @@ export const Size = () => {
                             typeof size === "string" ? size : $Heights.sm};
 
     ${({ padding }: ButtonProps) => padding ? '' : Padding()}
-
+    ${Paddings()}
     `;
 };
 
@@ -34,5 +34,14 @@ const Padding = () => {
                 size === 'md' ? $Paddings.md :
                     size === 'lg' ? $Paddings.lg :
                         size === 'xl' ? $Paddings.xl : $Paddings.sm};
+    `
+}
+
+const Paddings = () => {
+    return css`
+        padding-left: ${({ paddingLeft }: ButtonProps) => paddingLeft};
+        padding-right: ${({ paddingRight }: ButtonProps) => paddingRight};
+        padding-top: ${({ paddingTop }: ButtonProps) => paddingTop};
+        padding-bottom: ${({ paddingBottom }: ButtonProps) => paddingBottom};
     `
 }

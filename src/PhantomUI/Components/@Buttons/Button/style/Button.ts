@@ -14,15 +14,15 @@ import Variants from "./Variants";
 // size
 import { BorderRadiusGroup } from "../../../../Style/size/RadiusGroup.style";
 
-const ButtonStyle = styled(motion.button).attrs({whileTap: {scale: 0.95}})`
+const ButtonStyle = styled(motion.button).attrs({ whileTap: { scale: 0.95 } })`
     ${Style()}
     
     // default
     display: flex;
-    justify-content: center;
-    align-items: center;
+    ${({ justify }) => justify ? '' : 'justify-content: center;'}
+    ${({ align }) => align ? '' : 'align-items: center;'}
 
-    ${({ fontWeight }) => fontWeight ? '' : 'font-weight: 600;'};
+    ${({ fontWeight }) => fontWeight ? '' : 'font-weight: 600;'}
 
     appearance: none;
     border-style: none;

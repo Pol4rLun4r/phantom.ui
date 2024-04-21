@@ -43,7 +43,7 @@ const TransparentVariant = () => {
     background-color: transparent;
     
     &:hover{
-        background-color: ${themeColorSchema({ dark: 6, light: 6 }, '0.15')};
+        background-color: ${({ disabledHoverEffect }: ButtonProps) => disabledHoverEffect ? '' : themeColorSchema({ dark: 6, light: 6 }, '0.15')};
     }
     `;
 };
